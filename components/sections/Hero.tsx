@@ -15,7 +15,7 @@ export default function Hero() {
         initial="hidden"
         animate="visible"
         variants={container}
-        className="flex flex-wrap justify-center gap-x-4 gap-y-2 bg-gradient-to-r from-rust via-sand to-rust bg-gradient-sweep bg-clip-text font-display text-4xl leading-tight tracking-tight text-transparent animate-gradient-sweep sm:text-6xl md:text-7xl"
+        className="flex flex-wrap justify-center gap-x-4 gap-y-2 bg-gradient-to-r from-rust via-sand to-rust bg-gradient-sweep bg-clip-text font-display text-5xl leading-tight tracking-tight text-transparent animate-gradient-sweep sm:text-6xl md:text-7xl"
       >
         {headlineWords.map((wordText, index) => (
           <span key={`${wordText}-${index}`} className="overflow-hidden">
