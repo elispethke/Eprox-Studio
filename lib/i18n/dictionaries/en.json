@@ -1,0 +1,13 @@
+{
+  "nav": {
+    "home": "Home",
+    "vision": "Vision",
+    "foundation": "Foundation",
+    "capabilities": "Capabilities",
+    "contact": "Contact"
+  },
+  "hero": {
+    "headline": "Digital Engineering Studio that endures.",
+    "subheadline": "We design and build precise, performant digital architecture for brands that intend to last. Beyond websites and applications—we engineer experiences."
+  }
+}

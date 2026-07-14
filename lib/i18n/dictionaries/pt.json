@@ -1,0 +1,14 @@
+{
+  "nav": {
+    "home": "Início",
+    "vision": "Visão",
+    "foundation": "Fundação",
+    "capabilities": "Capacidades",
+    "contact": "Contato"
+  },
+  "hero": {
+    "_todo": "TODO: aguardando tradução oficial — texto duplicado do EN",
+    "headline": "Digital Engineering Studio that endures.",
+    "subheadline": "We design and build precise, performant digital architecture for brands that intend to last. Beyond websites and applications—we engineer experiences."
+  }
+}
