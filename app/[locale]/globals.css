@@ -11,3 +11,58 @@ body {
   background: var(--background);
   color: var(--foreground);
 }
+
+/* Custom Scrollbar
+   Tokens mirrored 1:1 from tailwind.config.ts (obsidian, rust, rust-dark) —
+   no colors introduced here beyond those already defined there.
+   Apply `.custom-scrollbar` to any element with its own internal scroll
+   (future mobile menu, carousel, etc.) to get the same treatment; the
+   bare selectors below already cover the page's main scrollbar.
+   NOTE: when Lenis (smooth scroll) is added in a future phase, revisit
+   these selectors — Lenis wraps scrolling in its own container, which may
+   need `.custom-scrollbar` applied there instead of (or in addition to)
+   the native page scrollbar. */
+:root {
+  --scrollbar-track: var(--background); /* obsidian */
+  --scrollbar-thumb-from: #c36a3f; /* rust */
+  --scrollbar-thumb-to: #a4512c; /* rust-dark */
+}
+
+html,
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb-from) var(--scrollbar-track);
+}
+
+::-webkit-scrollbar,
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track,
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb,
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    var(--scrollbar-thumb-from),
+    var(--scrollbar-thumb-to)
+  );
+  border-radius: 9999px;
+  opacity: 0.85;
+}
+
+::-webkit-scrollbar-thumb:hover,
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  opacity: 1;
+}
+
+@media (max-width: 767px) {
+  ::-webkit-scrollbar,
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+}

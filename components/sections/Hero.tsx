@@ -19,7 +19,7 @@ export default function Hero() {
       >
         {headlineWords.map((wordText, index) => (
           <span key={`${wordText}-${index}`} className="overflow-hidden">
-            <motion.span variants={word} className="inline-block">
+            <motion.span variants={word} className="leading-[1.4]">
               {wordText}
             </motion.span>
           </span>

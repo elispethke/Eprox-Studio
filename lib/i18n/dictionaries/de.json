@@ -10,5 +10,21 @@
     "_todo": "TODO: aguardando tradução oficial — texto duplicado do EN",
     "headline": "Digital Engineering Studio that endures.",
     "subheadline": "We design and build precise, performant digital architecture for brands that intend to last. Beyond websites and applications—we engineer experiences."
+  },
+  "vision": {
+    "_todo": "TODO: aguardando tradução oficial do brand book — texto duplicado do EN",
+    "headline": "Orchestrating the Future of Digital Interaction",
+    "body": [
+      "At Eprox, we believe that technology must transcend basic functionality. We create far more than websites, applications, and systems: we develop digital engineering experiences that seamlessly unite strategy, premium design, and cutting-edge technology to transform ambitious ideas into high-impact digital products.",
+      "Every single project is architected to deliver flawless performance, pioneering innovation, and a memorable user journey. Our absolute goal is to construct solutions that not only captivate visually but generate measurable business growth, solidify brand authority, and accelerate our clients' market reach."
+    ]
+  },
+  "foundation": {
+    "_todo": "TODO: aguardando tradução oficial do brand book — texto duplicado do EN",
+    "headline": "The Genesis of Precision",
+    "body": [
+      "Eprox was born from a singular, powerful realization: the digital landscape was saturated with disposable interfaces, but desperately lacking in structural mastery. Our founder, Elis, envisioned a studio where the meticulousness of physical engineering could meet the infinite possibilities of software design.",
+      "Bringing together elite software architects and visionary designers, Elis established Eprox to bridge the gap between heavy technical systems and cinematic user experiences. Today, we stand as a global sanctuary for brands seeking digital solutions that are as robust under the hood as they are breathtaking on the surface. We don't just build for the web; we engineer legacies."
+    ]
   }
 }
