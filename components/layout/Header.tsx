@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { useHeaderScroll } from "@/hooks/useHeaderScroll";
+import { useHeaderScroll } from "@/components/layout/useHeaderScroll";
 import Logo from "@/components/ui/Logo";
 import NavLink from "@/components/ui/NavLink";
 import LanguageSwitcher from "@/components/ui/LanguageSwitcher";

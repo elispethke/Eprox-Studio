@@ -1,4 +1,4 @@
-import type { MobileProject } from "@/types/project";
+import type { MobileProject } from "@/features/projects/types";
 
 function poster(index: number): string {
   const variant = (index % 8) + 1;

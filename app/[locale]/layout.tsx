@@ -6,6 +6,7 @@ import { Manrope, Space_Mono } from "next/font/google";
 import { routing } from "@/lib/i18n/config";
 import { brandColors } from "@/lib/brand";
 import Header from "@/components/layout/Header";
+import LenisProvider from "@/components/layout/LenisProvider";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -73,8 +74,10 @@ export default async function LocaleLayout({
     >
       <body className="min-h-full flex flex-col">
         <NextIntlClientProvider messages={messages}>
-          <Header />
-          {children}
+          <LenisProvider>
+            <Header />
+            {children}
+          </LenisProvider>
         </NextIntlClientProvider>
       </body>
     </html>

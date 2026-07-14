@@ -25,3 +25,8 @@ export interface SystemProject extends ProjectBase {
 }
 
 export type Project = WebProject | MobileProject | SystemProject;
+
+/** "carousel" is the home fan-carousel anatomy — title column beside the
+ * media. "grid" is the /work section grid anatomy — media filling most of
+ * the card, title/category below it. */
+export type ProjectCardVariant = "carousel" | "grid";

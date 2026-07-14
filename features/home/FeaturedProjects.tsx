@@ -3,9 +3,9 @@
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Link } from "@/lib/i18n/navigation";
-import { useFanCarousel } from "@/hooks/useFanCarousel";
-import { getFeaturedProjects } from "@/lib/data";
-import ProjectCard from "@/components/ui/cards/ProjectCard";
+import { useFanCarousel } from "@/features/home/hooks/useFanCarousel";
+import { getFeaturedProjects } from "@/features/projects/data";
+import ProjectCard from "@/features/projects/components/ProjectCard";
 
 // Home carousel is site-only by brand direction — mobile/system cards
 // (PhoneFrame, system BrowserFrame variant) never appear here.
@@ -31,15 +31,15 @@ export default function FeaturedProjects() {
   } = useFanCarousel({ itemCount: featuredProjects.length });
 
   return (
-    <section className="overflow-hidden bg-obsidian px-6 py-24 md:py-32">
-      <div className="mx-auto max-w-7xl">
+    <section className="sticky top-0 z-40 flex h-screen items-center overflow-hidden bg-obsidian px-6 py-24 md:py-32">
+      <div className="mx-auto w-full max-w-7xl">
         <h2 className="font-display text-4xl leading-tight tracking-tight text-sand sm:text-5xl">
           {t("featuredHeadline")}
         </h2>
 
         <div
           ref={containerRef}
-          className="relative mt-16 h-[380px] touch-pan-y sm:h-[440px]"
+          className="relative mt-16 h-[420px] touch-pan-y sm:h-[500px]"
         >
           <motion.div
             className="absolute inset-0 flex cursor-grab items-center justify-center active:cursor-grabbing"
@@ -56,7 +56,7 @@ export default function FeaturedProjects() {
               return (
                 <motion.div
                   key={project.id}
-                  className="absolute h-[300px] w-[220px] sm:h-[360px] sm:w-[260px]"
+                  className="absolute h-[3000px] w-[600px] sm:h-[590px] sm:w-[720px]"
                   style={{ zIndex: transform.zIndex }}
                   animate={{
                     x: transform.x,

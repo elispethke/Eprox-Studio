@@ -1,4 +1,4 @@
-import type { SystemProject } from "@/types/project";
+import type { SystemProject } from "@/features/projects/types";
 
 function placeholder(index: number): string {
   const variant = (index % 8) + 1;

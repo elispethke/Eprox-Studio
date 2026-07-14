@@ -1,7 +1,7 @@
-import Hero from "@/components/sections/Hero";
-import OurVision from "@/components/sections/OurVision";
-import Foundation from "@/components/sections/Foundation";
-import FeaturedProjects from "@/components/sections/FeaturedProjects";
+import Hero from "@/features/home/Hero";
+import OurVision from "@/features/home/OurVision";
+import Foundation from "@/features/home/Foundation";
+import FeaturedProjects from "@/features/home/FeaturedProjects";
 
 export default function Home() {
   return (

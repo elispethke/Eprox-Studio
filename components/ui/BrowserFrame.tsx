@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { useCardParallax } from "@/hooks/useCardParallax";
+import { useCardParallax } from "@/components/ui/hooks/useCardParallax";
 
 interface BrowserFrameProps {
   src: string;

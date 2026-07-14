@@ -2,7 +2,7 @@
 
 import type { ReactNode } from "react";
 import { motion, useMotionTemplate } from "framer-motion";
-import { useMagneticTilt } from "@/hooks/useMagneticTilt";
+import { useMagneticTilt } from "@/features/projects/hooks/useMagneticTilt";
 import { brandColors } from "@/lib/brand";
 
 interface CardGlassWrapperProps {

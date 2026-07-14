@@ -31,6 +31,20 @@
     "next": "Next project",
     "pageHeadline": "Selected Work",
     "pageSubheadline": "A growing collection of digital products engineered for performance, precision, and lasting impact.",
-    "projectCountLabel": "Projects"
+    "projectCountLabel": "Projects",
+    "sections": {
+      "web": {
+        "eyebrow": "Web Development",
+        "headline": "Web Projects"
+      },
+      "systems": {
+        "eyebrow": "Systems & Platforms",
+        "headline": "Systems"
+      },
+      "mobile": {
+        "eyebrow": "Mobile Apps",
+        "headline": "Mobile Apps"
+      }
+    }
   }
 }

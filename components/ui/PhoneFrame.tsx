@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { useCardParallax } from "@/hooks/useCardParallax";
-import { useVideoInView } from "@/hooks/useVideoInView";
+import { useCardParallax } from "@/components/ui/hooks/useCardParallax";
+import { useVideoInView } from "@/components/ui/hooks/useVideoInView";
 
 interface PhoneFrameCommonProps {
   alt: string;

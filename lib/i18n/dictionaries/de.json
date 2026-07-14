@@ -2,39 +2,49 @@
   "nav": {
     "home": "Startseite",
     "vision": "Vision",
-    "foundation": "Fundament",
-    "capabilities": "Fähigkeiten",
+    "foundation": "Entstehung",
+    "capabilities": "Leistungen",
     "contact": "Kontakt"
   },
   "hero": {
-    "_todo": "TODO: aguardando tradução oficial — texto duplicado do EN",
-    "headline": "Digital Engineering Studio that endures.",
-    "subheadline": "We design and build precise, performant digital architecture for brands that intend to last. Beyond websites and applications—we engineer experiences."
+    "headline": "Ein Digital Engineering Studio, das Bestand hat.",
+    "subheadline": "Wir konzipieren und entwickeln präzise, leistungsstarke digitale Architekturen für Marken mit langfristiger Vision. Weit mehr als Websites und Apps – wir erschaffen digitale Erlebnisse."
   },
   "vision": {
-    "_todo": "TODO: aguardando tradução oficial do brand book — texto duplicado do EN",
-    "headline": "Orchestrating the Future of Digital Interaction",
+    "headline": "Die Zukunft der digitalen Interaktion gestalten",
     "body": [
-      "At Eprox, we believe that technology must transcend basic functionality. We create far more than websites, applications, and systems: we develop digital engineering experiences that seamlessly unite strategy, premium design, and cutting-edge technology to transform ambitious ideas into high-impact digital products.",
-      "Every single project is architected to deliver flawless performance, pioneering innovation, and a memorable user journey. Our absolute goal is to construct solutions that not only captivate visually but generate measurable business growth, solidify brand authority, and accelerate our clients' market reach."
+      "Bei Eprox sind wir überzeugt, dass Technologie weit über reine Funktionalität hinausgehen muss. Wir entwickeln weit mehr als Websites, Anwendungen und Systeme: Wir schaffen Digital-Engineering-Erlebnisse, die Strategie, exzellentes Design und modernste Technologie miteinander verbinden, um ambitionierte Ideen in digitale Produkte mit nachhaltiger Wirkung zu verwandeln.",
+      "Jedes einzelne Projekt wird mit höchster Präzision entwickelt, um außergewöhnliche Performance, kontinuierliche Innovation und ein unvergessliches Nutzererlebnis zu gewährleisten. Unser Anspruch ist es, Lösungen zu schaffen, die nicht nur visuell begeistern, sondern messbares Unternehmenswachstum fördern, die Markenstärke ausbauen und die Marktpräsenz unserer Kunden nachhaltig beschleunigen."
     ]
   },
   "foundation": {
-    "_todo": "TODO: aguardando tradução oficial do brand book — texto duplicado do EN",
-    "headline": "The Genesis of Precision",
+    "headline": "Der Ursprung der Präzision",
     "body": [
-      "Eprox was born from a singular, powerful realization: the digital landscape was saturated with disposable interfaces, but desperately lacking in structural mastery. Our founder, Elis, envisioned a studio where the meticulousness of physical engineering could meet the infinite possibilities of software design.",
-      "Bringing together elite software architects and visionary designers, Elis established Eprox to bridge the gap between heavy technical systems and cinematic user experiences. Today, we stand as a global sanctuary for brands seeking digital solutions that are as robust under the hood as they are breathtaking on the surface. We don't just build for the web; we engineer legacies."
+      "Eprox entstand aus einer klaren Erkenntnis: Die digitale Welt war voller kurzlebiger Oberflächen, doch es fehlte an echter technischer Exzellenz. Unsere Gründerin Elis hatte die Vision eines Studios, in dem die Präzision klassischer Ingenieurskunst auf die grenzenlosen Möglichkeiten moderner Softwareentwicklung trifft.",
+      "Gemeinsam mit erstklassigen Softwarearchitekten und visionären Designern gründete Elis Eprox, um die Lücke zwischen komplexen technischen Systemen und außergewöhnlichen digitalen Nutzererlebnissen zu schließen. Heute sind wir ein internationales Studio für Marken, die digitale Lösungen suchen, die technisch ebenso robust wie gestalterisch beeindruckend sind. Wir entwickeln nicht einfach für das Web – wir schaffen digitale Vermächtnisse."
     ]
   },
   "work": {
-    "_todo": "TODO: aguardando tradução oficial do brand book — texto duplicado do EN",
-    "featuredHeadline": "Featured Projects",
-    "viewAll": "View All Projects",
-    "prev": "Previous project",
-    "next": "Next project",
-    "pageHeadline": "Selected Work",
-    "pageSubheadline": "A growing collection of digital products engineered for performance, precision, and lasting impact.",
-    "projectCountLabel": "Projects"
+    "featuredHeadline": "Ausgewählte Projekte",
+    "viewAll": "Alle Projekte ansehen",
+    "prev": "Vorheriges Projekt",
+    "next": "Nächstes Projekt",
+    "pageHeadline": "Unsere Arbeiten",
+    "pageSubheadline": "Eine stetig wachsende Sammlung digitaler Produkte, entwickelt für höchste Performance, Präzision und nachhaltige Wirkung.",
+    "projectCountLabel": "Projekte",
+    "sections": {
+      "web": {
+        "eyebrow": "Webentwicklung",
+        "headline": "Web-Projekte"
+      },
+      "systems": {
+        "eyebrow": "Systeme & Plattformen",
+        "headline": "Systeme"
+      },
+      "mobile": {
+        "eyebrow": "Mobile Apps",
+        "headline": "Mobile Apps"
+      }
+    }
   }
 }

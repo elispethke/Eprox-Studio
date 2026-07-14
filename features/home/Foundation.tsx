@@ -3,8 +3,9 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { useParallaxImage } from "@/hooks/useParallaxImage";
-import { ELIS_PHOTO_BLUR_DATA_URL } from "@/lib/image-placeholders";
+import { useParallaxImage } from "@/features/home/hooks/useParallaxImage";
+import { useSectionFade } from "@/features/home/hooks/useSectionFade";
+import { ELIS_PHOTO_BLUR_DATA_URL } from "@/features/home/image-placeholders";
 
 // The frame and the photo inside it are parallaxed independently, at
 // different speeds, for a layered depth effect. Margin stays coupled
@@ -20,11 +21,17 @@ export default function Foundation() {
   const { containerRef: photoRef, y: photoY } = useParallaxImage({
     offset: PHOTO_PARALLAX_OFFSET,
   });
+  const { ref, opacity } = useSectionFade();
   const body = t.raw("body") as string[];
 
   return (
-    <section id="foundation" className="bg-sand px-6 py-24 md:py-32">
-      <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-2 md:items-center md:gap-20">
+    <motion.section
+      id="foundation"
+      ref={ref}
+      style={{ opacity }}
+      className="sticky top-0 z-30 flex h-screen items-center overflow-hidden bg-sand px-6 py-24 md:py-32"
+    >
+      <div className="mx-auto grid w-full max-w-7xl gap-12 md:grid-cols-2 md:items-center md:gap-20">
         <div className="order-2 md:order-1">
           <h2 className="font-display text-4xl leading-tight tracking-tight text-obsidian sm:text-5xl">
             {t("headline")}
@@ -65,6 +72,6 @@ export default function Foundation() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

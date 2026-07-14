@@ -4,11 +4,12 @@ const config: Config = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./features/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       colors: {
-        obsidian: "#0B0C0E",
+        obsidian: "#19100B",
         sand: "#F2EFE9",
         rust: {
           DEFAULT: "#C36A3F",

@@ -89,6 +89,9 @@ export function useFanCarousel({
 
     const handleWheel = (event: WheelEvent) => {
       event.preventDefault();
+      // Lenis listens for wheel on window; without this, scrolling over the
+      // carousel would also smooth-scroll the page while cycling cards.
+      event.stopPropagation();
       if (isLocked.current) return;
 
       const delta =
