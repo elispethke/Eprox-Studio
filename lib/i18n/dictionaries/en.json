@@ -23,5 +23,14 @@
       "Eprox was born from a singular, powerful realization: the digital landscape was saturated with disposable interfaces, but desperately lacking in structural mastery. Our founder, Elis, envisioned a studio where the meticulousness of physical engineering could meet the infinite possibilities of software design.",
       "Bringing together elite software architects and visionary designers, Elis established Eprox to bridge the gap between heavy technical systems and cinematic user experiences. Today, we stand as a global sanctuary for brands seeking digital solutions that are as robust under the hood as they are breathtaking on the surface. We don't just build for the web; we engineer legacies."
     ]
+  },
+  "work": {
+    "featuredHeadline": "Featured Projects",
+    "viewAll": "View All Projects",
+    "prev": "Previous project",
+    "next": "Next project",
+    "pageHeadline": "Selected Work",
+    "pageSubheadline": "A growing collection of digital products engineered for performance, precision, and lasting impact.",
+    "projectCountLabel": "Projects"
   }
 }
