@@ -10,7 +10,7 @@ interface UseTextRevealOptions {
 interface UseTextRevealResult {
   /** Wraps the split words; orchestrates the stagger via staggerChildren. */
   container: Variants;
-  /** Applied to each masked word: opacity + y + blur reveal. */
+  /** Applied to each word: fade-in with a subtle upward rise. */
   word: Variants;
   /** Applied to elements (e.g. the sub-headline) that reveal after the headline. */
   followUp: Variants;
@@ -19,7 +19,7 @@ interface UseTextRevealResult {
 const EASE_OUT_EXPO: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
 /**
- * Orchestrates a cinematic, masked text reveal (opacity + y + blur, staggered
+ * Orchestrates a cinematic text reveal (opacity + subtle rise, staggered
  * per word) for use with `motion` components. Kept independent of any single
  * component so both the headline and any future editorial copy can reuse it.
  */
@@ -38,12 +38,11 @@ export function useTextReveal({
   };
 
   const word: Variants = {
-    hidden: { opacity: 0, y: "100%", filter: "blur(8px)" },
+    hidden: { opacity: 0, y: 18 },
     visible: {
       opacity: 1,
-      y: "0%",
-      filter: "blur(0px)",
-      transition: { duration: 0.9, ease: EASE_OUT_EXPO },
+      y: 0,
+      transition: { duration: 1, ease: "easeOut" },
     },
   };
 
