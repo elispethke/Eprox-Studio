@@ -61,6 +61,8 @@ export default function FeaturedProjects() {
                   animate={{
                     x: transform.x,
                     rotate: transform.rotate,
+
+                    
                     scale: transform.scale,
                     opacity: transform.opacity,
                   }}
