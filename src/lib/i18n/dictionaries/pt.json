@@ -1,0 +1,86 @@
+{
+  "nav": {
+    "vision": "Visão",
+    "foundation": "Origem",
+    "work": "Trabalhos",
+    "contact": "Contato",
+    "letsTalk": "Vamos Conversar"
+  },
+  "contact": {
+    "kicker": "Fale Conosco",
+    "headline": "Vamos Construir Algo Duradouro",
+    "subheadline": "Conte sobre o seu projeto. Normalmente respondemos em até um dia útil.",
+    "fields": {
+      "name": "Seu Nome",
+      "email": "Endereço de E-mail",
+      "subject": "Assunto",
+      "message": "Sua Mensagem"
+    },
+    "errors": {
+      "required": "Este campo é obrigatório",
+      "email": "Informe um e-mail válido",
+      "tooShort": "Conte um pouco mais de detalhes"
+    },
+    "submit": "Enviar Mensagem",
+    "sending": "Enviando",
+    "success": "Mensagem enviada — retornaremos em breve.",
+    "error": "Algo deu errado. Tente novamente em instantes.",
+    "info": {
+      "emailLabel": "E-mail",
+      "phoneLabel": "Telefone",
+      "addressLabel": "Estúdio",
+      "followLabel": "Redes Sociais"
+    }
+  },
+  "hero": {
+    "headline": "Um estúdio de engenharia digital feito para durar.",
+    "subheadline": "Projetamos e desenvolvemos arquitetura digital precisa e de alta performance para marcas que pensam no longo prazo. Muito além de sites e aplicativos, criamos experiências digitais."
+  },
+  "vision": {
+    "headline": "Orquestrando o Futuro da Interação Digital",
+    "body": [
+      "Na Eprox, acreditamos que a tecnologia deve ir além da funcionalidade. Criamos muito mais do que sites, aplicativos e sistemas: desenvolvemos experiências de engenharia digital que unem estratégia, design de alto padrão e tecnologia de ponta para transformar ideias ambiciosas em produtos digitais de grande impacto.",
+      "Cada projeto é cuidadosamente arquitetado para oferecer desempenho impecável, inovação contínua e uma experiência memorável para o usuário. Nosso compromisso é construir soluções que não apenas impressionem visualmente, mas também impulsionem o crescimento dos negócios, fortaleçam a autoridade das marcas e acelerem sua presença no mercado."
+    ]
+  },
+  "foundation": {
+    "headline": "A Origem da Precisão",
+    "body": [
+      "A Eprox nasceu de uma percepção clara e poderosa: o cenário digital estava repleto de interfaces descartáveis, mas carente de excelência em engenharia. Nossa fundadora, Elis, idealizou um estúdio onde o rigor da engenharia pudesse se unir às infinitas possibilidades do design de software.",
+      "Reunindo arquitetos de software altamente qualificados e designers visionários, Elis criou a Eprox para conectar a robustez dos sistemas complexos à elegância de experiências digitais envolventes. Hoje, somos um estúdio global para marcas que buscam soluções digitais tão sólidas em sua estrutura quanto impressionantes em sua apresentação. Nós não apenas desenvolvemos para a web. Nós construímos legados digitais."
+    ]
+  },
+  "projectsCarousel": {
+    "kicker": "Nosso Trabalho",
+    "headline": "Projetos Selecionados",
+    "subheadline": "Uma seleção de experiências digitais que criamos para marcas e startups visionárias.",
+    "viewAll": "Ver Todos os Projetos",
+    "viewProject": "Ver Projeto",
+    "prev": "Projeto anterior",
+    "next": "Próximo projeto",
+    "goTo": "Ir para o projeto"
+  },
+  "work": {
+    "featuredHeadline": "Projetos em Destaque",
+    "viewAll": "Ver Todos os Projetos",
+    "prev": "Projeto anterior",
+    "next": "Próximo projeto",
+    "pageHeadline": "Projetos Selecionados",
+    "pageSubheadline": "Uma coleção crescente de produtos digitais desenvolvidos com foco em desempenho, precisão e impacto duradouro.",
+    "projectCountLabel": "Projetos",
+    "sections": {
+      "web": {
+        "eyebrow": "Desenvolvimento Web",
+        "headline": "Projetos Web"
+      },
+      "systems": {
+        "eyebrow": "Sistemas & Plataformas",
+        "headline": "Sistemas"
+      },
+      "mobile": {
+        "eyebrow": "Aplicativos Móveis",
+        "headline": "Aplicativos Mobile"
+      }
+    }
+  }
+}

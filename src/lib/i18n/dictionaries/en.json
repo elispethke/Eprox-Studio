@@ -1,0 +1,86 @@
+{
+  "nav": {
+    "vision": "Vision",
+    "foundation": "Foundation",
+    "work": "Work",
+    "contact": "Contact",
+    "letsTalk": "Let's Talk"
+  },
+  "contact": {
+    "kicker": "Get In Touch",
+    "headline": "Let's Build Something That Lasts",
+    "subheadline": "Tell us about your project. We usually reply within one business day.",
+    "fields": {
+      "name": "Your Name",
+      "email": "Email Address",
+      "subject": "Subject",
+      "message": "Your Message"
+    },
+    "errors": {
+      "required": "This field is required",
+      "email": "Enter a valid email address",
+      "tooShort": "Please give us a bit more detail"
+    },
+    "submit": "Send Message",
+    "sending": "Sending",
+    "success": "Message sent — we'll get back to you soon.",
+    "error": "Something went wrong. Please try again in a moment.",
+    "info": {
+      "emailLabel": "Email",
+      "phoneLabel": "Phone",
+      "addressLabel": "Studio",
+      "followLabel": "Follow Us"
+    }
+  },
+  "hero": {
+    "headline": "Digital Engineering Studio that endures.",
+    "subheadline": "We design and build precise, performant digital architecture for brands that intend to last. Beyond websites and applications—we engineer experiences."
+  },
+  "vision": {
+    "headline": "Orchestrating the Future of Digital Interaction",
+    "body": [
+      "At Eprox, we believe that technology must transcend basic functionality. We create far more than websites, applications, and systems: we develop digital engineering experiences that seamlessly unite strategy, premium design, and cutting-edge technology to transform ambitious ideas into high-impact digital products.",
+      "Every single project is architected to deliver flawless performance, pioneering innovation, and a memorable user journey. Our absolute goal is to construct solutions that not only captivate visually but generate measurable business growth, solidify brand authority, and accelerate our clients' market reach."
+    ]
+  },
+  "foundation": {
+    "headline": "The Genesis of Precision",
+    "body": [
+      "Eprox was born from a singular, powerful realization: the digital landscape was saturated with disposable interfaces, but desperately lacking in structural mastery. Our founder, Elis, envisioned a studio where the meticulousness of physical engineering could meet the infinite possibilities of software design.",
+      "Bringing together elite software architects and visionary designers, Elis established Eprox to bridge the gap between heavy technical systems and cinematic user experiences. Today, we stand as a global sanctuary for brands seeking digital solutions that are as robust under the hood as they are breathtaking on the surface. We don't just build for the web; we engineer legacies."
+    ]
+  },
+  "projectsCarousel": {
+    "kicker": "Our Work",
+    "headline": "Selected Projects",
+    "subheadline": "A selection of digital experiences we've crafted for forward-thinking brands and startups.",
+    "viewAll": "View All Projects",
+    "viewProject": "View Project",
+    "prev": "Previous project",
+    "next": "Next project",
+    "goTo": "Go to project"
+  },
+  "work": {
+    "featuredHeadline": "Featured Projects",
+    "viewAll": "View All Projects",
+    "prev": "Previous project",
+    "next": "Next project",
+    "pageHeadline": "Selected Work",
+    "pageSubheadline": "A growing collection of digital products engineered for performance, precision, and lasting impact.",
+    "projectCountLabel": "Projects",
+    "sections": {
+      "web": {
+        "eyebrow": "Web Development",
+        "headline": "Web Projects"
+      },
+      "systems": {
+        "eyebrow": "Systems & Platforms",
+        "headline": "Systems"
+      },
+      "mobile": {
+        "eyebrow": "Mobile Apps",
+        "headline": "Mobile Apps"
+      }
+    }
+  }
+}

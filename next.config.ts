@@ -1,10 +1,15 @@
 import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
 
-const withNextIntl = createNextIntlPlugin("./lib/i18n/request.ts");
+const withNextIntl = createNextIntlPlugin("./src/lib/i18n/request.ts");
 
 const nextConfig: NextConfig = {
   devIndicators: false,
+  images: {
+    // Temporary public showcase imagery (projects-carousel) — swap for
+    // first-party project shots later and drop this pattern.
+    remotePatterns: [{ protocol: "https", hostname: "images.unsplash.com" }],
+  },
 };
 
 export default withNextIntl(nextConfig);

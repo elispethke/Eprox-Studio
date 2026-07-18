@@ -2,21 +2,33 @@ import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./features/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/features/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/shared/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       colors: {
-        obsidian: "#19100B",
+        obsidian: {
+          DEFAULT: "#0A0A0A",
+          deep: "#0D0D0D",
+        },
         sand: "#F2EFE9",
         rust: {
-          DEFAULT: "#C36A3F",
+          DEFAULT: "#C9793C",
+          light: "#D98A4A",
           dark: "#A4512C",
         },
         sage: "#7A8471",
         silver: "#E2E8F0",
+        // Light-section palette (contact): warm paper base, dark primary
+        // derived from it, and the soft copper accent pair.
+        linen: "#EFEBE3",
+        espresso: "#2B2420",
+        copper: {
+          light: "#E8C2A0",
+          DEFAULT: "#D4986E",
+        },
       },
       fontFamily: {
         display: ["var(--font-display)"],
