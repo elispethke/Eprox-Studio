@@ -7,6 +7,8 @@ import { routing } from "@/lib/i18n/config";
 import { brandColors } from "@/shared/lib/brand";
 import Header from "@/shared/components/layout/Header";
 import LenisProvider from "@/shared/components/layout/LenisProvider";
+import { Footer } from "@/features/footer";
+import { ConsentModal } from "@/features/consent";
 import "@/shared/styles/globals.css";
 
 const manrope = Manrope({
@@ -75,6 +77,8 @@ export default async function LocaleLayout({
           <LenisProvider>
             <Header />
             {children}
+            <Footer />
+            <ConsentModal />
           </LenisProvider>
         </NextIntlClientProvider>
       </body>

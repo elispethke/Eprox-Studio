@@ -37,18 +37,51 @@
     "subheadline": "Projetamos e desenvolvemos arquitetura digital precisa e de alta performance para marcas que pensam no longo prazo. Muito além de sites e aplicativos, criamos experiências digitais."
   },
   "vision": {
-    "headline": "Orquestrando o Futuro da Interação Digital",
+    "headline": "Transformando Ideias em Produtos Digitais",
     "body": [
-      "Na Eprox, acreditamos que a tecnologia deve ir além da funcionalidade. Criamos muito mais do que sites, aplicativos e sistemas: desenvolvemos experiências de engenharia digital que unem estratégia, design de alto padrão e tecnologia de ponta para transformar ideias ambiciosas em produtos digitais de grande impacto.",
-      "Cada projeto é cuidadosamente arquitetado para oferecer desempenho impecável, inovação contínua e uma experiência memorável para o usuário. Nosso compromisso é construir soluções que não apenas impressionem visualmente, mas também impulsionem o crescimento dos negócios, fortaleçam a autoridade das marcas e acelerem sua presença no mercado."
+      "Na Eprox, acreditamos que a tecnologia deve ir além da funcionalidade. Criamos muito mais do que sites, aplicativos e sistemas. Desenvolvemos experiências digitais que unem estratégia, design de alto padrão e engenharia de software para transformar ideias ambiciosas em produtos digitais de alto impacto.",
+      "Cada projeto é concebido com foco em performance, inovação e experiência do usuário. Nosso objetivo é criar soluções que não apenas impressionem visualmente, mas também gerem resultados reais, fortaleçam marcas e acelerem o crescimento dos nossos clientes."
     ]
   },
   "foundation": {
-    "headline": "A Origem da Precisão",
+    "headline": "Onde Tudo Começou",
     "body": [
-      "A Eprox nasceu de uma percepção clara e poderosa: o cenário digital estava repleto de interfaces descartáveis, mas carente de excelência em engenharia. Nossa fundadora, Elis, idealizou um estúdio onde o rigor da engenharia pudesse se unir às infinitas possibilidades do design de software.",
-      "Reunindo arquitetos de software altamente qualificados e designers visionários, Elis criou a Eprox para conectar a robustez dos sistemas complexos à elegância de experiências digitais envolventes. Hoje, somos um estúdio global para marcas que buscam soluções digitais tão sólidas em sua estrutura quanto impressionantes em sua apresentação. Nós não apenas desenvolvemos para a web. Nós construímos legados digitais."
+      "A Eprox nasceu da convicção de que produtos digitais excepcionais exigem muito mais do que um bom design ou um código bem escrito. Eles precisam unir estratégia, engenharia e experiência em um único processo.",
+      "Fundada por Elis Pethke, a Eprox foi criada para aproximar a solidez da engenharia de software da sofisticação do design digital. Cada projeto é desenvolvido com atenção aos detalhes, foco em performance e compromisso com a excelência em cada etapa. Hoje, trabalhamos com empresas que buscam mais do que uma presença online. Criamos produtos digitais que unem tecnologia, design e estratégia para gerar resultados consistentes e valor duradouro."
     ]
+  },
+  "consent": {
+    "kicker": "Privacidade & Cookies",
+    "title": "Sua privacidade importa",
+    "body": "Usamos cookies essenciais para o funcionamento do site e para lembrar suas preferências. Com a sua permissão, podemos usar também cookies de análise para entender como os visitantes interagem com o site. Sua escolha fica salva por 180 dias.",
+    "privacyLink": "Política de Privacidade",
+    "accept": "Aceitar",
+    "decline": "Recusar"
+  },
+  "footer": {
+    "ctaLead": "Vamos construir algo",
+    "ctaAccent": "extraordinário.",
+    "startProject": "Iniciar um Projeto",
+    "tagline": "Experiências digitais de engenharia precisa para marcas que pensam no longo prazo.",
+    "sitemap": "Mapa do Site",
+    "services": "Serviços",
+    "contactCol": "Contato",
+    "hours": "",
+    "serviceItems": {
+      "web": "Web Design",
+      "branding": "Branding",
+      "mobile": "Aplicativos Mobile",
+      "systems": "Sistemas & Plataformas"
+    },
+    "newsletterTitle": "Fique por Dentro",
+    "newsletterPlaceholder": "Seu endereço de e-mail",
+    "subscribe": "Inscrever",
+    "newsletterSuccess": "Inscrição feita — bem-vindo(a) a bordo.",
+    "newsletterError": "Informe um e-mail válido e tente de novo.",
+    "rights": "Todos os direitos reservados.",
+    "privacy": "Política de Privacidade",
+    "terms": "Termos de Uso",
+    "backToTop": "Voltar ao topo"
   },
   "projectsCarousel": {
     "kicker": "Nosso Trabalho",

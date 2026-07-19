@@ -37,18 +37,51 @@
     "subheadline": "We design and build precise, performant digital architecture for brands that intend to last. Beyond websites and applications—we engineer experiences."
   },
   "vision": {
-    "headline": "Orchestrating the Future of Digital Interaction",
+    "headline": "Transforming Ideas into Digital Products",
     "body": [
-      "At Eprox, we believe that technology must transcend basic functionality. We create far more than websites, applications, and systems: we develop digital engineering experiences that seamlessly unite strategy, premium design, and cutting-edge technology to transform ambitious ideas into high-impact digital products.",
-      "Every single project is architected to deliver flawless performance, pioneering innovation, and a memorable user journey. Our absolute goal is to construct solutions that not only captivate visually but generate measurable business growth, solidify brand authority, and accelerate our clients' market reach."
+      "At Eprox, we believe technology should go beyond functionality. We create far more than websites, applications, and software. We build digital experiences that combine strategy, premium design, and software engineering to transform ambitious ideas into high-impact digital products.",
+      "Every project is designed with performance, innovation, and user experience at its core. Our goal is to create solutions that not only look exceptional but also deliver real business results, strengthen brands, and accelerate our clients' growth."
     ]
   },
   "foundation": {
-    "headline": "The Genesis of Precision",
+    "headline": "Where It All Began",
     "body": [
-      "Eprox was born from a singular, powerful realization: the digital landscape was saturated with disposable interfaces, but desperately lacking in structural mastery. Our founder, Elis, envisioned a studio where the meticulousness of physical engineering could meet the infinite possibilities of software design.",
-      "Bringing together elite software architects and visionary designers, Elis established Eprox to bridge the gap between heavy technical systems and cinematic user experiences. Today, we stand as a global sanctuary for brands seeking digital solutions that are as robust under the hood as they are breathtaking on the surface. We don't just build for the web; we engineer legacies."
+      "Eprox was founded on the belief that exceptional digital products require far more than great design or well-written code. They demand the seamless integration of strategy, engineering, and user experience.",
+      "Founded by Elis Pethke, Eprox was created to bridge the strength of software engineering with the sophistication of digital design. Every project is crafted with meticulous attention to detail, a focus on performance, and an unwavering commitment to excellence. Today, we partner with companies looking for more than an online presence. We create digital products that combine technology, design, and strategy to deliver lasting value and measurable results."
     ]
+  },
+  "consent": {
+    "kicker": "Privacy & Cookies",
+    "title": "Your privacy matters",
+    "body": "We use essential cookies to make this site work and to remember your preferences. With your permission, we may also use analytics cookies to understand how visitors interact with the site. Your choice is stored for 180 days.",
+    "privacyLink": "Privacy Policy",
+    "accept": "Accept",
+    "decline": "Decline"
+  },
+  "footer": {
+    "ctaLead": "Let's build something",
+    "ctaAccent": "extraordinary.",
+    "startProject": "Start a Project",
+    "tagline": "Precision-engineered digital experiences for brands that intend to last.",
+    "sitemap": "Sitemap",
+    "services": "Services",
+    "contactCol": "Contact",
+    "hours": "",
+    "serviceItems": {
+      "web": "Web Design",
+      "branding": "Branding",
+      "mobile": "Mobile Apps",
+      "systems": "Systems & Platforms"
+    },
+    "newsletterTitle": "Stay in the Loop",
+    "newsletterPlaceholder": "Your email address",
+    "subscribe": "Subscribe",
+    "newsletterSuccess": "You're in — welcome aboard.",
+    "newsletterError": "Enter a valid email and try again.",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "backToTop": "Back to top"
   },
   "projectsCarousel": {
     "kicker": "Our Work",

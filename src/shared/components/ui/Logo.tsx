@@ -44,7 +44,8 @@ export default function Logo({
   showWordmark = true,
   className = "",
 }: LogoProps) {
-  const textColor = variant === "light" ? "text-sand" : "text-obsidian";
+  const textColor = variant === "light" ? "text-sand" : "text-espresso";
+  const subColor = variant === "light" ? "text-sand/50" : "text-espresso/50";
 
   return (
     <Link
@@ -60,7 +61,7 @@ export default function Logo({
           >
             EPROX
           </span>
-          <span className="mt-1 font-mono text-[10px] tracking-[0.35em] text-sand/50">
+          <span className={`mt-1 font-mono text-[10px] tracking-[0.35em] ${subColor}`}>
             STUDIO
           </span>
         </span>

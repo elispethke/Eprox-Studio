@@ -66,3 +66,45 @@ html,
     width: 4px;
   }
 }
+
+/* Copper gradient border for glass cards: paints ONLY a 1px ring (the
+   two mask layers cancel everywhere except the padding area), so the card
+   behind it can stay truly transparent — a gradient background + padding
+   trick would tint the whole card through the glass. Apply to an absolutely
+   positioned, aria-hidden child of a rounded container. */
+.glass-border-copper {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(232, 194, 160, 0.8),
+    rgba(212, 152, 110, 0.35) 45%,
+    rgba(212, 152, 110, 0.08) 75%,
+    transparent
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Chrome/WebKit autofill paints its own opaque white/blue background over
+   inputs. Clipping the background to the text keeps the field visually
+   transparent (the glass card shows through) while autofilled. Color is the
+   espresso token from tailwind.config.ts. */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #2b2420;
+  caret-color: #2b2420;
+  transition: background-color 600000s 0s;
+}

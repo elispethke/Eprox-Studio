@@ -9,6 +9,9 @@ const RATE_MAX_PER_WINDOW = 5;
 const submissionLog = new Map<string, number[]>();
 
 function isRateLimited(ip: string): boolean {
+  // In local dev every request shares one "local" bucket and test runs
+  // exhaust the window instantly — only enforce the limit in production.
+  if (process.env.NODE_ENV !== "production") return false;
   const now = Date.now();
   const recent = (submissionLog.get(ip) ?? []).filter(
     (timestamp) => now - timestamp < RATE_WINDOW_MS,
