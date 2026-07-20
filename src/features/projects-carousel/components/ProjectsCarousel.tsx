@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import SectionLabel from "@/shared/components/ui/SectionLabel";
 import PillButton from "@/shared/components/ui/PillButton";
 import GrainOverlay from "@/shared/components/ui/GrainOverlay";
+import { LineReveal, splitIntoLines } from "@/shared/hooks/useLineReveal";
 import { buildCarouselMetrics, useCarousel3D } from "../hooks/useCarousel3D";
 import { carouselProjects } from "../data/projects";
 import ProjectCard from "./ProjectCard";
@@ -38,8 +39,8 @@ export default function ProjectsCarousel({
       setCenterWidth(
         Math.min(
           Math.max(track.clientWidth * CENTER_WIDTH_RATIO, MIN_CENTER_WIDTH),
-          MAX_CENTER_WIDTH,
-        ),
+          MAX_CENTER_WIDTH
+        )
       );
     };
 
@@ -60,12 +61,17 @@ export default function ProjectsCarousel({
     trackHandlers,
     autoPlayPauseHandlers,
     isDragging,
+    isAutoPlaying,
+    toggleAutoPlay,
+    isUserPaused,
   } = useCarousel3D({
     itemCount: carouselProjects.length,
     spacing: metrics.sideX,
     autoPlay,
     autoPlayInterval,
   });
+
+  const activeProject = carouselProjects[activeIndex];
 
   return (
     <section
@@ -80,9 +86,11 @@ export default function ProjectsCarousel({
           <span className="font-mono text-sm text-sand/40">(03)</span>
 
           <div className="flex flex-col items-center text-center lg:max-w-xl">
-            <SectionLabel className="justify-center">{t("kicker")}</SectionLabel>
+            <SectionLabel className="justify-center">
+              {t("kicker")}
+            </SectionLabel>
             <h2 className="mt-5 font-display text-4xl tracking-tight text-sand sm:text-5xl md:text-6xl">
-              {t("headline")}
+              <LineReveal lines={splitIntoLines(t("headline"), 20)} />
             </h2>
             <p className="mt-5 max-w-md font-subtitle text-sm text-sand/55 sm:text-base">
               {t("subheadline")}
@@ -106,6 +114,13 @@ export default function ProjectsCarousel({
             isDragging ? "cursor-grabbing" : "cursor-grab"
           }`}
         >
+          {/* Floor glow: a soft copper pool of light under the focused card,
+              grounding the ring the way the reference render does. */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute bottom-[-6%] left-1/2 h-[120px] w-[min(70%,760px)] -translate-x-1/2 rounded-[100%] bg-[radial-gradient(ellipse_at_center,rgba(201,121,60,0.22)_0%,rgba(201,121,60,0.08)_45%,transparent_75%)] blur-xl"
+          />
+
           <div className="absolute inset-0 [transform-style:preserve-3d]">
             {carouselProjects.map((project, index) => (
               <ProjectCard
@@ -120,6 +135,15 @@ export default function ProjectsCarousel({
               />
             ))}
           </div>
+
+          {/* Announces slide changes to assistive tech without stealing focus. */}
+          <p aria-live="polite" className="sr-only">
+            {t("announce", {
+              title: activeProject.title,
+              current: activeIndex + 1,
+              total: carouselProjects.length,
+            })}
+          </p>
         </div>
 
         <div className="mt-10 flex justify-center">
@@ -128,6 +152,10 @@ export default function ProjectsCarousel({
             onNext={next}
             prevLabel={t("prev")}
             nextLabel={t("next")}
+            onTogglePlay={toggleAutoPlay}
+            isUserPaused={isUserPaused}
+            playLabel={t("play")}
+            pauseLabel={t("pause")}
           >
             <ProgressDashes
               count={carouselProjects.length}
@@ -135,6 +163,8 @@ export default function ProjectsCarousel({
               onSelect={goTo}
               goToLabel={t("goTo")}
               labels={carouselProjects.map((project) => project.title)}
+              isAutoPlaying={isAutoPlaying}
+              autoPlayIntervalMs={autoPlayInterval}
             />
           </CarouselControls>
         </div>

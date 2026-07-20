@@ -21,15 +21,51 @@ export default function ConsentModal() {
   const { isOpen, choose } = useConsent();
   const lenis = useLenis();
   const acceptRef = useRef<HTMLButtonElement>(null);
+  const dialogRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!isOpen) return;
+
+    const previouslyFocused = document.activeElement as HTMLElement | null;
     lenis?.stop();
     document.body.style.overflow = "hidden";
     acceptRef.current?.focus();
+
+    // Everything behind the dialog becomes inert: unreachable by Tab,
+    // invisible to assistive tech, unclickable — a true modal.
+    const background = document.querySelectorAll<HTMLElement>(
+      "header, main, footer"
+    );
+    background.forEach((element) => {
+      element.inert = true;
+    });
+
+    // Belt-and-braces focus trap for anything inert doesn't cover.
+    const trapFocus = (event: globalThis.KeyboardEvent) => {
+      if (event.key !== "Tab" || !dialogRef.current) return;
+      const focusables =
+        dialogRef.current.querySelectorAll<HTMLElement>("button, a[href]");
+      if (focusables.length === 0) return;
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+    document.addEventListener("keydown", trapFocus);
+
     return () => {
+      document.removeEventListener("keydown", trapFocus);
+      background.forEach((element) => {
+        element.inert = false;
+      });
       lenis?.start();
       document.body.style.overflow = "";
+      previouslyFocused?.focus();
     };
   }, [isOpen, lenis]);
 
@@ -44,6 +80,7 @@ export default function ConsentModal() {
           className="fixed inset-0 z-[100] flex items-end justify-center bg-obsidian/60 p-4 backdrop-blur-sm sm:items-center sm:p-6"
         >
           <motion.div
+            ref={dialogRef}
             role="dialog"
             aria-modal="true"
             aria-labelledby="consent-title"

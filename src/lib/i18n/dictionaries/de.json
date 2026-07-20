@@ -3,6 +3,7 @@
     "vision": "Vision",
     "foundation": "Entstehung",
     "work": "Arbeiten",
+    "projects": "Projekte",
     "contact": "Kontakt",
     "letsTalk": "Lass Uns Sprechen"
   },
@@ -41,14 +42,95 @@
     "body": [
       "Bei Eprox sind wir überzeugt, dass Technologie mehr leisten muss als reine Funktionalität. Wir entwickeln weit mehr als Websites, Apps und Softwarelösungen. Wir schaffen digitale Erlebnisse, die Strategie, hochwertiges Design und Softwareentwicklung vereinen, um ambitionierte Ideen in wirkungsvolle digitale Produkte zu verwandeln.",
       "Jedes Projekt wird mit Fokus auf Performance, Innovation und Benutzererlebnis entwickelt. Unser Ziel ist es, Lösungen zu schaffen, die nicht nur visuell überzeugen, sondern auch messbare Geschäftsergebnisse liefern, Marken stärken und das Wachstum unserer Kunden beschleunigen."
-    ]
+    ],
+    "kicker": "Unsere Vision"
   },
   "foundation": {
     "headline": "Wo Alles Begann",
     "body": [
       "Eprox entstand aus der Überzeugung, dass außergewöhnliche digitale Produkte weit mehr erfordern als gutes Design oder sauber geschriebenen Code. Sie entstehen durch das Zusammenspiel von Strategie, Softwareentwicklung und Nutzererlebnis.",
       "Gegründet von Elis Pethke, wurde Eprox mit dem Ziel geschaffen, die Stabilität moderner Softwareentwicklung mit der Eleganz digitalen Designs zu verbinden. Jedes Projekt wird mit höchster Sorgfalt, Fokus auf Performance und einem kompromisslosen Qualitätsanspruch umgesetzt. Heute arbeiten wir mit Unternehmen zusammen, die mehr als nur eine Online-Präsenz suchen. Wir entwickeln digitale Produkte, die Technologie, Design und Strategie vereinen, um nachhaltigen Mehrwert und messbare Ergebnisse zu schaffen."
-    ]
+    ],
+    "kicker": "Unsere Geschichte"
+  },
+  "a11y": {
+    "skipToContent": "Zum Inhalt springen"
+  },
+  "meta": {
+    "title": "Eprox Studio — Digital Engineering Studio",
+    "description": "Wir konzipieren und entwickeln präzise, leistungsstarke digitale Architekturen für Marken mit langfristiger Vision. Weit mehr als Websites und Apps — wir erschaffen Erlebnisse.",
+    "workTitle": "Ausgewählte Arbeiten",
+    "workDescription": "Eine stetig wachsende Sammlung digitaler Produkte, entwickelt für höchste Performance, Präzision und nachhaltige Wirkung.",
+    "privacyTitle": "Datenschutzerklärung",
+    "termsTitle": "Nutzungsbedingungen"
+  },
+  "notFound": {
+    "kicker": "Verloren Im Raum",
+    "headline": "Diese Seite existiert nicht.",
+    "body": "Die Adresse hat sich vielleicht geändert — oder es gab sie nie. Wir bringen dich zurück auf festen Boden.",
+    "backHome": "Zur Startseite"
+  },
+  "errorPage": {
+    "kicker": "Unerwarteter Fehler",
+    "headline": "Etwas lief nicht nach Plan.",
+    "body": "Der Fehler liegt bei uns, nicht bei dir. Das Team wurde benachrichtigt — bitte versuche es erneut.",
+    "retry": "Erneut Versuchen"
+  },
+  "legal": {
+    "privacy": {
+      "kicker": "Rechtliches",
+      "title": "Datenschutzerklärung",
+      "updated": "Zuletzt aktualisiert: Juli 2026",
+      "sections": [
+        {
+          "heading": "Was wir erheben",
+          "body": "Wenn du unser Kontaktformular nutzt oder den Newsletter abonnierst, erheben wir die von dir angegebenen Daten: Name, E-Mail-Adresse, Betreff und Nachricht. Das Browsen der Website erfordert weder ein Konto noch personenbezogene Daten."
+        },
+        {
+          "heading": "Wie wir sie nutzen",
+          "body": "Übermittelte Daten werden ausschließlich verwendet, um deine Anfrage zu beantworten oder den angeforderten Newsletter zuzustellen. Wir verkaufen, vermieten oder teilen deine personenbezogenen Daten nicht zu Marketingzwecken mit Dritten."
+        },
+        {
+          "heading": "Cookies",
+          "body": "Wir verwenden ein einziges essenzielles First-Party-Cookie, um deine Datenschutz-Entscheidung 180 Tage zu speichern. Analyse-Cookies werden nur gesetzt, wenn du ihnen im Consent-Dialog ausdrücklich zustimmst; du kannst deine Meinung jederzeit ändern, indem du deine Cookies löschst."
+        },
+        {
+          "heading": "Auftragsverarbeiter",
+          "body": "Formular-Übermittlungen werden über Formspree weitergeleitet, unseren Formularverarbeitungs-Anbieter, der als Auftragsverarbeiter in unserem Namen handelt. Die Verarbeitung unterliegt deren eigener Datenschutzerklärung."
+        },
+        {
+          "heading": "Deine Rechte",
+          "body": "Du kannst jederzeit Auskunft, Berichtigung oder Löschung deiner personenbezogenen Daten verlangen — schreib dazu an contact@eproxstudio.com. Wir beantworten alle Anfragen innerhalb von 30 Tagen."
+        }
+      ]
+    },
+    "terms": {
+      "kicker": "Rechtliches",
+      "title": "Nutzungsbedingungen",
+      "updated": "Zuletzt aktualisiert: Juli 2026",
+      "sections": [
+        {
+          "heading": "Zustimmung",
+          "body": "Mit dem Zugriff auf diese Website stimmst du diesen Bedingungen zu. Wenn du mit Teilen davon nicht einverstanden bist, stelle die Nutzung der Website bitte ein."
+        },
+        {
+          "heading": "Geistiges Eigentum",
+          "body": "Alle Inhalte dieser Website — einschließlich Design, Texte, Grafiken, Logos, Bilder und Code — sind Eigentum von Eprox Studio oder seinen Lizenzgebern und durch geltende Gesetze zum Schutz geistigen Eigentums geschützt. Eine Vervielfältigung ohne vorherige schriftliche Genehmigung ist untersagt."
+        },
+        {
+          "heading": "Nutzung der Website",
+          "body": "Du verpflichtest dich, diese Website nur für rechtmäßige Zwecke zu nutzen und dabei weder die Rechte anderer Besucher zu verletzen noch deren Nutzung einzuschränken."
+        },
+        {
+          "heading": "Haftung",
+          "body": "Diese Website wird \"wie besehen\" bereitgestellt. Wir bemühen uns um Genauigkeit und Verfügbarkeit, übernehmen jedoch keine Haftung für indirekte Schäden aus der Nutzung oder vorübergehenden Nichtverfügbarkeit."
+        },
+        {
+          "heading": "Kontakt",
+          "body": "Fragen zu diesen Bedingungen kannst du an contact@eproxstudio.com senden. Wir können diese Bedingungen gelegentlich aktualisieren; das obige Datum entspricht der letzten Überarbeitung."
+        }
+      ]
+    }
   },
   "consent": {
     "kicker": "Datenschutz & Cookies",
@@ -91,29 +173,52 @@
     "viewProject": "Projekt Ansehen",
     "prev": "Vorheriges Projekt",
     "next": "Nächstes Projekt",
-    "goTo": "Zum Projekt"
+    "goTo": "Zum Projekt",
+    "play": "Automatische Wiedergabe fortsetzen",
+    "pause": "Automatische Wiedergabe pausieren",
+    "announce": "{title} — Projekt {current} von {total}"
   },
   "work": {
-    "featuredHeadline": "Ausgewählte Projekte",
-    "viewAll": "Alle Projekte ansehen",
-    "prev": "Vorheriges Projekt",
-    "next": "Nächstes Projekt",
-    "pageHeadline": "Unsere Arbeiten",
-    "pageSubheadline": "Eine stetig wachsende Sammlung digitaler Produkte, entwickelt für höchste Performance, Präzision und nachhaltige Wirkung.",
-    "projectCountLabel": "Projekte",
+    "kicker": "Unsere Arbeit",
+    "titleLine1": "Ausgewählte",
+    "titleLine2": "Projekte",
+    "subtitle": "Digitale Erlebnisse, die Strategie, Design und Technologie vereinen, um echte Geschäftsergebnisse zu erzielen.",
+    "viewProject": "Projekt Ansehen",
+    "viewAllProjects": "Alle Projekte ansehen",
+    "stats": {
+      "total": "Projekte Realisiert",
+      "websites": "Websites Entwickelt",
+      "systems": "Systeme Implementiert",
+      "apps": "Apps Veröffentlicht"
+    },
+    "filter": {
+      "all": "Alle",
+      "websites": "Websites",
+      "systems": "Systeme",
+      "apps": "Apps",
+      "sortLabel": "Sortieren",
+      "sortRecent": "Neueste",
+      "sortAz": "A–Z"
+    },
     "sections": {
-      "web": {
-        "eyebrow": "Webentwicklung",
-        "headline": "Web-Projekte"
+      "websites": {
+        "title": "Websites",
+        "description": "Digitale Erlebnisse, die Marken und Menschen verbinden."
       },
       "systems": {
-        "eyebrow": "Systeme & Plattformen",
-        "headline": "Systeme"
+        "title": "Systeme",
+        "description": "Robuste Plattformen, die Abläufe und Ergebnisse optimieren."
       },
-      "mobile": {
-        "eyebrow": "Mobile Apps",
-        "headline": "Mobile Apps"
+      "apps": {
+        "title": "Apps",
+        "description": "Native und plattformübergreifende Apps für höchste Performance."
       }
+    },
+    "cta": {
+      "kicker": "Lass Uns Etwas Außergewöhnliches Schaffen",
+      "title": "Hast du ein Projekt im Kopf?",
+      "subtitle": "Wir verwandeln Ideen in wirkungsvolle digitale Lösungen.",
+      "button": "Lass Uns Sprechen"
     }
   }
 }

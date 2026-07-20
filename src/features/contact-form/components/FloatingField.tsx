@@ -13,7 +13,7 @@ interface FloatingFieldProps {
 }
 
 const CONTROL_CLASSNAME =
-  "peer w-full border-b border-espresso/25 bg-transparent pb-2.5 pt-6 font-subtitle text-sm text-espresso outline-none transition-colors placeholder:text-transparent";
+  "peer w-full border-b border-espresso/25 bg-transparent pb-2.5 pt-6 font-subtitle text-sm text-espresso caret-copper outline-none transition-colors placeholder:text-transparent";
 
 const LABEL_CLASSNAME =
   "pointer-events-none absolute left-0 top-5 origin-left font-mono text-xs uppercase tracking-[0.2em] text-espresso/95 transition-all duration-300 " +
@@ -79,7 +79,10 @@ export default function FloatingField({
         }`}
       />
       {error && (
-        <p id={`${id}-error`} className="mt-1.5 font-mono text-[10px] uppercase tracking-[0.15em] text-rust-dark">
+        <p
+          id={`${id}-error`}
+          className="mt-1.5 font-mono text-[10px] uppercase tracking-[0.15em] text-rust-dark"
+        >
           {error}
         </p>
       )}

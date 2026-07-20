@@ -2,6 +2,7 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight, Check, Loader2 } from "lucide-react";
+import { useMagnetic } from "@/shared/hooks/useMagnetic";
 import type { ContactStatus } from "../hooks/useContactForm";
 
 interface SubmitButtonProps {
@@ -22,9 +23,13 @@ export default function SubmitButton({
   idleLabel,
   loadingLabel,
 }: SubmitButtonProps) {
+  const { x, y, handlers } = useMagnetic(0.3, 7);
+
   return (
-    <button
+    <motion.button
       type="submit"
+      style={{ x, y }}
+      {...handlers}
       disabled={status === "loading" || status === "success"}
       className="group relative inline-flex h-12 min-w-[13rem] items-center justify-center gap-2.5 overflow-hidden rounded-full bg-gradient-to-r from-copper to-rust-dark px-7 font-mono text-xs uppercase tracking-[0.2em] text-linen transition-all duration-300 hover:shadow-[0_10px_30px_-8px_rgba(212,152,110,0.7)] disabled:cursor-default"
     >
@@ -70,6 +75,6 @@ export default function SubmitButton({
           </motion.span>
         )}
       </AnimatePresence>
-    </button>
+    </motion.button>
   );
 }

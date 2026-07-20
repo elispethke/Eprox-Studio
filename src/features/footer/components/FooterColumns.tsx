@@ -11,7 +11,7 @@ import {
   CONTACT_EMAIL,
   CONTACT_PHONE,
 } from "@/shared/lib/contact";
-import { useMagnetic } from "../hooks/useMagnetic";
+import { useMagnetic } from "@/shared/hooks/useMagnetic";
 import SocialLinks from "./SocialLinks";
 import FooterNewsletter from "./FooterNewsletter";
 
@@ -26,14 +26,20 @@ const COLUMN_VARIANTS = {
 } as const;
 
 const COLUMN_TITLE_CLASSNAME =
-  "font-mono text-[10px] uppercase tracking-[0.25em] text-espresso/45";
+  "font-mono text-[10px] uppercase tracking-[0.25em] text-espresso/60";
 
 function ColumnTitle({ children }: { children: ReactNode }) {
   return <span className={COLUMN_TITLE_CLASSNAME}>{children}</span>;
 }
 
 /** Sitemap entry with magnetic hover; anchors smooth-scroll on the home page. */
-function MagneticFooterLink({ href, children }: { href: string; children: ReactNode }) {
+function MagneticFooterLink({
+  href,
+  children,
+}: {
+  href: string;
+  children: ReactNode;
+}) {
   const pathname = usePathname();
   const scrollToAnchor = useAnchorScroll();
   const { x, y, handlers } = useMagnetic(0.25, 5);
@@ -82,7 +88,8 @@ export default function FooterColumns() {
   const sitemap = [
     { label: tNav("vision"), href: "#vision" },
     { label: tNav("foundation"), href: "#foundation" },
-    { label: tNav("work"), href: "/work" },
+    { label: tNav("work"), href: "#work" },
+    { label: tNav("projects"), href: "/work" },
     { label: tNav("contact"), href: "#contact" },
   ];
 
@@ -114,7 +121,9 @@ export default function FooterColumns() {
         <ul className="mt-4 space-y-3">
           {sitemap.map((item) => (
             <li key={item.href}>
-              <MagneticFooterLink href={item.href}>{item.label}</MagneticFooterLink>
+              <MagneticFooterLink href={item.href}>
+                {item.label}
+              </MagneticFooterLink>
             </li>
           ))}
         </ul>
@@ -124,7 +133,10 @@ export default function FooterColumns() {
         <ColumnTitle>{t("services")}</ColumnTitle>
         <ul className="mt-4 space-y-3">
           {services.map((service) => (
-            <li key={service} className="font-subtitle text-sm text-espresso/70">
+            <li
+              key={service}
+              className="font-subtitle text-sm text-espresso/70"
+            >
               {service}
             </li>
           ))}

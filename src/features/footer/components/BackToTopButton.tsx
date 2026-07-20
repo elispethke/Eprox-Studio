@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowUp } from "lucide-react";
 import { useLenis } from "@/shared/components/layout/LenisProvider";
-import { useMagnetic } from "../hooks/useMagnetic";
+import { useMagnetic } from "@/shared/hooks/useMagnetic";
 
 interface BackToTopButtonProps {
   label: string;

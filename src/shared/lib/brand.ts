@@ -1,4 +1,6 @@
-// Single source of truth for Eprox Studio brand tokens.
+// TS mirror of the palette for canvas/WebGL/JS consumers (flow lines, 3D
+// scene) that can't read CSS custom properties. The authoritative CSS-side
+// declaration lives in src/shared/styles/globals.css — change BOTH together.
 // Copy lives in lib/i18n/dictionaries/*.json (see useTranslations), not here.
 
 export const brandColors = {

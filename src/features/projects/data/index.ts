@@ -11,8 +11,3 @@ export { systemProjects } from "@/features/projects/data/projects-systems";
 export function getAllProjects(): Project[] {
   return [...webProjects, ...mobileProjects, ...systemProjects];
 }
-
-/** Home carousel projects — sites only, per brand direction. */
-export function getFeaturedProjects(): Project[] {
-  return webProjects.filter((project) => project.featured);
-}

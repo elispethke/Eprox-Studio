@@ -2,9 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ---------------------------------------------------------------------------
+   Design tokens — single source of truth for the palette.
+   RGB triplets so Tailwind's <alpha-value> opacity modifiers keep working
+   (tailwind.config.ts maps every color to rgb(var(--…) / <alpha-value>)).
+   The TS mirror for canvas/JS consumers lives in src/shared/lib/brand.ts —
+   change BOTH together. */
 :root {
-  --background: #0a0a0a;
-  --foreground: #f2efe9;
+  --color-obsidian: 10 10 10;
+  --color-obsidian-deep: 13 13 13;
+  --color-sand: 242 239 233;
+  --color-rust: 201 121 60;
+  --color-rust-light: 217 138 74;
+  --color-rust-dark: 164 81 44;
+  --color-sage: 122 132 113;
+  --color-silver: 226 232 240;
+  --color-linen: 239 235 227;
+  --color-espresso: 43 36 32;
+  --color-copper: 212 152 110;
+  --color-copper-light: 232 194 160;
+
+  --background: rgb(var(--color-obsidian));
+  --foreground: rgb(var(--color-sand));
 }
 
 body {

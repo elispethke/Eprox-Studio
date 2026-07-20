@@ -1,0 +1,6 @@
+// Base64 blur previews for public/images assets, generated once via
+// scripts/optimize-images.mjs (see git history — the script was removed
+// after producing these values, they don't need to be regenerated).
+
+export const ELIS_PHOTO_BLUR_DATA_URL =
+  "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAYCAMAAADEfo0+AAAAZlBMVEUVExMFBAQ5MCtTSkQdGhrMwrwzKSQODQzT0dEoJCNcVU7Sysc9OTgnHBRvaWAzIhRFNSV5dHJJQi/a1tavpZ7BurbanX2DgHtmSDWWjYX31bYiLwmoeV/ew7DXvqrEkHKCZlT6vJxpPQCAAAAACXBIWXMAAAsSAAALEgHS3X78AAABBUlEQVQYlUWO4W7DIBCDDRwcR4BAAiRpu7Z7/5ecmDrNf87+dJaM29fT2mVZ/Ee4fdkJ/rLH7fkPdu/3349lmdbvdvcdz9as9S3KsfvebcZ7C33pdD5S9fYIG94m973y+D652RbuKFvui1nHONXRr1ygdbY2pjGKyvba7jDatF7VY0AZ2yYIpmZgPJilNXPHuqYcFb0KEx85bAjnWQDaSMA1KoYJIRAIROCqlYKOMeqkmJlRi1IQ0WI2pA3A4dYVIiL6NcbLsVyXcQAJuce7rKzYZGIAzHAppXk+meDKmoREE4CVQdDOOa1dnDtmF87JBMcEDgzoYKJINbNSEkAkMYQaRIh+AISaD+XQwZygAAAAAElFTkSuQmCC";

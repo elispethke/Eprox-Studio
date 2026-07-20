@@ -40,3 +40,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# AI tooling — local agent config/skills, not part of the shipped product.
+# May also accumulate local permissions/paths that shouldn't be public.
+.claude/
+.agents/
+skills-lock.json

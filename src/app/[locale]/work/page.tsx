@@ -1,21 +1,29 @@
+import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { getAllProjects, mobileProjects, systemProjects, webProjects } from "@/features/projects/data";
-import WorkGrid from "@/features/work/WorkGrid";
-import WorkBackgroundScene from "@/features/work/WorkBackgroundScene";
+import { WorkBackgroundScene, WorkPageContent } from "@/features/work";
 
 interface WorkPageProps {
   params: Promise<{ locale: string }>;
+}
+
+export async function generateMetadata({
+  params,
+}: WorkPageProps): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "meta" });
+  return { title: t("workTitle"), description: t("workDescription") };
 }
 
 export default async function WorkPage({ params }: WorkPageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const t = await getTranslations("work");
-  const countLabel = `${Math.floor(getAllProjects().length / 10) * 10}+ ${t("projectCountLabel")}`;
-
   return (
-    <main className="relative isolate flex flex-1 flex-col overflow-hidden bg-obsidian">
+    <main
+      id="main-content"
+      tabIndex={-1}
+      className="relative isolate flex flex-1 flex-col overflow-hidden bg-obsidian outline-none"
+    >
       {/* rgba values are the rust/sage brand tokens at low opacity — Tailwind's
           theme() can't resolve nested DEFAULT keys with an opacity modifier
           inside an arbitrary gradient value. */}
@@ -31,38 +39,7 @@ export default async function WorkPage({ params }: WorkPageProps) {
       />
       <WorkBackgroundScene />
 
-      <section className="px-6 pb-16 pt-32 md:pt-40">
-        <div className="mx-auto max-w-7xl">
-          <span className="font-mono text-xs uppercase tracking-[0.2em] text-rust">
-            {countLabel}
-          </span>
-          <h1 className="mt-4 font-display text-5xl leading-tight tracking-tight text-sand sm:text-6xl md:text-7xl">
-            {t("pageHeadline")}
-          </h1>
-          <p className="mt-6 max-w-2xl font-subtitle text-base text-sand/70 sm:text-lg">
-            {t("pageSubheadline")}
-          </p>
-        </div>
-      </section>
-
-      <WorkGrid
-        eyebrow={t("sections.web.eyebrow")}
-        headline={t("sections.web.headline")}
-        projects={webProjects}
-        layout="wide"
-      />
-      <WorkGrid
-        eyebrow={t("sections.systems.eyebrow")}
-        headline={t("sections.systems.headline")}
-        projects={systemProjects}
-        layout="wide"
-      />
-      <WorkGrid
-        eyebrow={t("sections.mobile.eyebrow")}
-        headline={t("sections.mobile.headline")}
-        projects={mobileProjects}
-        layout="tall"
-      />
+      <WorkPageContent />
     </main>
   );
 }

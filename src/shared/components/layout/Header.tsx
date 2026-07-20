@@ -15,7 +15,8 @@ import MobileMenuToggle from "@/shared/components/ui/MobileMenuToggle";
 const NAV_ITEMS = [
   { key: "vision", href: "#vision" },
   { key: "foundation", href: "#foundation" },
-  { key: "work", href: "/work" },
+  { key: "work", href: "#work" },
+  { key: "projects", href: "/work" },
   { key: "contact", href: "#contact" },
 ] as const;
 

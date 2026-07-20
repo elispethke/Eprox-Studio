@@ -9,10 +9,12 @@ const COOKIE_NAME = "eprox-consent";
 const COOKIE_MAX_AGE = 180 * 24 * 60 * 60;
 /** Small delay before the modal enters, so it doesn't fight the hero's own intro. */
 const OPEN_DELAY_MS = 900;
+/** Dispatched on window whenever the visitor makes a choice — lets consent-gated loaders (analytics) react live. */
+export const CONSENT_EVENT = "eprox:consent";
 
 // The choice is persisted in a first-party cookie — the semantically right
 // store for cookie consent (and the project bans localStorage).
-function readStoredChoice(): ConsentChoice | null {
+export function readStoredChoice(): ConsentChoice | null {
   const match = document.cookie
     .split("; ")
     .find((entry) => entry.startsWith(`${COOKIE_NAME}=`));
@@ -42,6 +44,7 @@ export function useConsent() {
   const choose = useCallback((choice: ConsentChoice) => {
     storeChoice(choice);
     setIsOpen(false);
+    window.dispatchEvent(new CustomEvent(CONSENT_EVENT, { detail: choice }));
   }, []);
 
   return { isOpen, choose };

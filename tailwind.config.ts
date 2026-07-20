@@ -8,26 +8,28 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      // All values resolve from the CSS custom properties declared in
+      // src/shared/styles/globals.css — the palette's single source of truth.
       colors: {
         obsidian: {
-          DEFAULT: "#0A0A0A",
-          deep: "#0D0D0D",
+          DEFAULT: "rgb(var(--color-obsidian) / <alpha-value>)",
+          deep: "rgb(var(--color-obsidian-deep) / <alpha-value>)",
         },
-        sand: "#F2EFE9",
+        sand: "rgb(var(--color-sand) / <alpha-value>)",
         rust: {
-          DEFAULT: "#C9793C",
-          light: "#D98A4A",
-          dark: "#A4512C",
+          DEFAULT: "rgb(var(--color-rust) / <alpha-value>)",
+          light: "rgb(var(--color-rust-light) / <alpha-value>)",
+          dark: "rgb(var(--color-rust-dark) / <alpha-value>)",
         },
-        sage: "#7A8471",
-        silver: "#E2E8F0",
-        // Light-section palette (contact): warm paper base, dark primary
-        // derived from it, and the soft copper accent pair.
-        linen: "#EFEBE3",
-        espresso: "#2B2420",
+        sage: "rgb(var(--color-sage) / <alpha-value>)",
+        silver: "rgb(var(--color-silver) / <alpha-value>)",
+        // Light-section palette (contact/footer): warm paper base, dark
+        // primary derived from it, and the soft copper accent pair.
+        linen: "rgb(var(--color-linen) / <alpha-value>)",
+        espresso: "rgb(var(--color-espresso) / <alpha-value>)",
         copper: {
-          light: "#E8C2A0",
-          DEFAULT: "#D4986E",
+          light: "rgb(var(--color-copper-light) / <alpha-value>)",
+          DEFAULT: "rgb(var(--color-copper) / <alpha-value>)",
         },
       },
       fontFamily: {

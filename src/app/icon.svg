@@ -1,5 +1,11 @@
 <svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-  <rect width="512" height="512" rx="104" fill="#0B0C0E"/>
-  <text x="256" y="336" font-family="Lora" font-weight="700" font-size="308" text-anchor="middle" fill="#F2EFE9">E</text>
-  <rect x="191" y="368" width="130" height="11" rx="5.5" fill="#C36A3F"/>
+  <!-- Brand mark: flat-top hexagon + geometric E, mirroring shared/components/ui/Logo.tsx -->
+  <rect width="512" height="512" rx="104" fill="#0A0A0A"/>
+  <polygon points="465,256 361,437 151,437 47,256 151,75 361,75" fill="none" stroke="#C9793C" stroke-opacity="0.85" stroke-width="26" stroke-linejoin="round"/>
+  <g fill="#C9793C">
+    <rect x="196" y="166" width="26" height="180"/>
+    <rect x="196" y="166" width="120" height="26"/>
+    <rect x="196" y="243" width="96" height="26"/>
+    <rect x="196" y="320" width="120" height="26"/>
+  </g>
 </svg>

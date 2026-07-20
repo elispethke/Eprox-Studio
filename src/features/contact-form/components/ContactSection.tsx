@@ -7,6 +7,7 @@ import { Mail, Phone, MapPin } from "lucide-react";
 import SectionLabel from "@/shared/components/ui/SectionLabel";
 import GrainOverlay from "@/shared/components/ui/GrainOverlay";
 import { useParallaxLayer } from "@/shared/hooks/useParallaxLayer";
+import { LineReveal, splitIntoLines } from "@/shared/hooks/useLineReveal";
 import {
   CONTACT_ADDRESS,
   CONTACT_EMAIL,
@@ -43,6 +44,13 @@ export default function ContactSection() {
       id="contact"
       className="relative z-40 overflow-hidden bg-linen py-24 md:py-32"
     >
+      {/* Bridge from the dark world above: a soft obsidian veil dissolving
+          into the linen, so the theme shift reads as intentional. */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-obsidian/20 to-transparent"
+      />
+
       {/* Far plane: glow + abstract rings echoing the hero's light traces. */}
       <motion.div
         aria-hidden="true"
@@ -65,7 +73,7 @@ export default function ContactSection() {
             <motion.div {...revealProps(0)}>
               <SectionLabel>{t("kicker")}</SectionLabel>
               <h2 className="mt-5 max-w-md font-display text-4xl tracking-tight text-espresso sm:text-5xl">
-                {t("headline")}
+                <LineReveal lines={splitIntoLines(t("headline"), 18)} />
               </h2>
               <p className="mt-5 max-w-sm font-subtitle text-sm text-espresso/60 sm:text-base">
                 {t("subheadline")}
@@ -75,9 +83,24 @@ export default function ContactSection() {
             <motion.dl {...revealProps(0.15)} className="mt-12 space-y-7">
               {(
                 [
-                  { label: t("info.emailLabel"), value: CONTACT_EMAIL, href: `mailto:${CONTACT_EMAIL}`, Icon: Mail },
-                  { label: t("info.phoneLabel"), value: CONTACT_PHONE, href: `tel:${CONTACT_PHONE.replace(/\s/g, "")}`, Icon: Phone },
-                  { label: t("info.addressLabel"), value: CONTACT_ADDRESS, href: undefined, Icon: MapPin },
+                  {
+                    label: t("info.emailLabel"),
+                    value: CONTACT_EMAIL,
+                    href: `mailto:${CONTACT_EMAIL}`,
+                    Icon: Mail,
+                  },
+                  {
+                    label: t("info.phoneLabel"),
+                    value: CONTACT_PHONE,
+                    href: `tel:${CONTACT_PHONE.replace(/\s/g, "")}`,
+                    Icon: Phone,
+                  },
+                  {
+                    label: t("info.addressLabel"),
+                    value: CONTACT_ADDRESS,
+                    href: undefined,
+                    Icon: MapPin,
+                  },
                 ] as const
               ).map(({ label, value, href, Icon }) => (
                 <div key={label} className="flex items-start gap-4">
@@ -85,12 +108,15 @@ export default function ContactSection() {
                     <Icon aria-hidden="true" className="h-4 w-4" />
                   </span>
                   <div>
-                    <dt className="font-mono text-[10px] uppercase tracking-[0.25em] text-espresso/45">
+                    <dt className="font-mono text-[10px] uppercase tracking-[0.25em] text-espresso/60">
                       {label}
                     </dt>
                     <dd className="mt-1 font-subtitle text-sm text-espresso">
                       {href ? (
-                        <a href={href} className="transition-colors hover:text-copper">
+                        <a
+                          href={href}
+                          className="transition-colors hover:text-copper"
+                        >
                           {value}
                         </a>
                       ) : (
@@ -103,7 +129,7 @@ export default function ContactSection() {
             </motion.dl>
 
             <motion.div {...revealProps(0.25)} className="mt-12">
-              <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-espresso/45">
+              <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-espresso/60">
                 {t("info.followLabel")}
               </span>
               <div className="mt-4 flex gap-3">

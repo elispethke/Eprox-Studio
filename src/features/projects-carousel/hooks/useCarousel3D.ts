@@ -8,6 +8,7 @@ import {
   type KeyboardEvent,
   type MouseEvent,
   type PointerEvent,
+  type WheelEvent,
 } from "react";
 import {
   animate,
@@ -36,6 +37,7 @@ interface CarouselTrackHandlers {
   onPointerCancel: (event: PointerEvent<HTMLDivElement>) => void;
   onClickCapture: (event: MouseEvent<HTMLDivElement>) => void;
   onKeyDown: (event: KeyboardEvent<HTMLDivElement>) => void;
+  onWheel: (event: WheelEvent<HTMLDivElement>) => void;
 }
 
 interface UseCarousel3DResult {
@@ -56,9 +58,20 @@ interface UseCarousel3DResult {
     onBlur: () => void;
   };
   isDragging: boolean;
+  /** True while the autoplay timer is actually running (enabled, not user-paused, motion allowed). */
+  isAutoPlaying: boolean;
+  /** WCAG 2.2.2 control: the visitor's explicit play/pause toggle. */
+  toggleAutoPlay: () => void;
+  /** Whether the visitor has explicitly paused (drives the button icon). */
+  isUserPaused: boolean;
 }
 
-const SPRING = { type: "spring", stiffness: 210, damping: 30, mass: 0.9 } as const;
+const SPRING = {
+  type: "spring",
+  stiffness: 210,
+  damping: 30,
+  mass: 0.9,
+} as const;
 /** Pointer travel (px) below which a gesture on the track still counts as a click. */
 const CLICK_DRAG_THRESHOLD = 8;
 
@@ -112,7 +125,7 @@ function lerp(from: number, to: number, t: number): number {
  */
 export function computeCardTransform(
   offset: number,
-  metrics: CarouselMetrics,
+  metrics: CarouselMetrics
 ): CardTransform {
   const distance = Math.abs(offset);
   const direction = Math.sign(offset);
@@ -120,8 +133,7 @@ export function computeCardTransform(
   const u = Math.min(distance, 1);
   const beyond = Math.max(distance - 1, 0);
 
-  const x =
-    direction * (lerp(0, metrics.sideX, u) + beyond * metrics.sideStep);
+  const x = direction * (lerp(0, metrics.sideX, u) + beyond * metrics.sideStep);
   const z = -distance * 230;
   const rotateY = -direction * (lerp(0, 30, u) + Math.min(beyond * 4, 8));
   const scale = lerp(1, 0.86, u) * (1 - Math.min(beyond, 2) * 0.05);
@@ -173,17 +185,19 @@ export function useCarousel3D({
   const [activeIndex, setActiveIndex] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
+  const [isUserPaused, setIsUserPaused] = useState(false);
 
   const animationRef = useRef<AnimationPlaybackControls | null>(null);
   const dragStartXRef = useRef(0);
   const dragStartPositionRef = useRef(0);
   const dragTravelRef = useRef(0);
   const isDraggingRef = useRef(false);
+  const wheelAccumulatorRef = useRef(0);
+  const wheelCooldownRef = useRef(0);
 
   useEffect(() => {
     return position.on("change", (p) => {
-      const normalized =
-        ((Math.round(p) % itemCount) + itemCount) % itemCount;
+      const normalized = ((Math.round(p) % itemCount) + itemCount) % itemCount;
       setActiveIndex(normalized);
     });
   }, [position, itemCount]);
@@ -197,7 +211,7 @@ export function useCarousel3D({
       }
       animationRef.current = animate(position, target, SPRING);
     },
-    [position, prefersReducedMotion],
+    [position, prefersReducedMotion]
   );
 
   const next = useCallback(() => {
@@ -215,7 +229,7 @@ export function useCarousel3D({
       // Travel the short way around the ring, not through zero.
       settleTo(current + wrapOffset(index - currentIndex, itemCount));
     },
-    [position, itemCount, settleTo],
+    [position, itemCount, settleTo]
   );
 
   const onPointerDown = useCallback(
@@ -228,7 +242,7 @@ export function useCarousel3D({
       isDraggingRef.current = true;
       setIsDragging(true);
     },
-    [position],
+    [position]
   );
 
   const onPointerMove = useCallback(
@@ -238,7 +252,7 @@ export function useCarousel3D({
       dragTravelRef.current = Math.max(dragTravelRef.current, Math.abs(deltaX));
       position.set(dragStartPositionRef.current - deltaX / spacing);
     },
-    [position, spacing],
+    [position, spacing]
   );
 
   const endDrag = useCallback(() => {
@@ -267,11 +281,38 @@ export function useCarousel3D({
         prev();
       }
     },
-    [next, prev],
+    [next, prev]
   );
 
+  // Horizontal wheel/trackpad support: swipes with a clear horizontal intent
+  // advance the ring; vertical scrolling passes through untouched.
+  const onWheel = useCallback(
+    (event: WheelEvent<HTMLDivElement>) => {
+      if (Math.abs(event.deltaX) <= Math.abs(event.deltaY)) return;
+      event.preventDefault();
+      const now = performance.now();
+      if (now < wheelCooldownRef.current) return;
+      wheelAccumulatorRef.current += event.deltaX;
+      if (Math.abs(wheelAccumulatorRef.current) > 60) {
+        settleTo(
+          Math.round(position.get()) + Math.sign(wheelAccumulatorRef.current)
+        );
+        wheelAccumulatorRef.current = 0;
+        wheelCooldownRef.current = now + 450;
+      }
+    },
+    [position, settleTo]
+  );
+
+  const isAutoPlaying =
+    autoPlay && !prefersReducedMotion && !isUserPaused && !isPaused;
+
+  const toggleAutoPlay = useCallback(() => {
+    setIsUserPaused((paused) => !paused);
+  }, []);
+
   useEffect(() => {
-    if (!autoPlay || prefersReducedMotion || isPaused) return;
+    if (!isAutoPlaying) return;
 
     const interval = setInterval(() => {
       if (!isDraggingRef.current) {
@@ -280,7 +321,7 @@ export function useCarousel3D({
     }, autoPlayInterval);
 
     return () => clearInterval(interval);
-  }, [autoPlay, prefersReducedMotion, isPaused, autoPlayInterval, position, settleTo]);
+  }, [isAutoPlaying, autoPlayInterval, position, settleTo]);
 
   useEffect(() => {
     return () => animationRef.current?.stop();
@@ -299,6 +340,7 @@ export function useCarousel3D({
       onPointerCancel: endDrag,
       onClickCapture,
       onKeyDown,
+      onWheel,
     },
     autoPlayPauseHandlers: {
       onMouseEnter: () => setIsPaused(true),
@@ -307,5 +349,8 @@ export function useCarousel3D({
       onBlur: () => setIsPaused(false),
     },
     isDragging,
+    isAutoPlaying,
+    toggleAutoPlay,
+    isUserPaused,
   };
 }

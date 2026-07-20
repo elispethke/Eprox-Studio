@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { SOCIAL_LINKS } from "@/shared/lib/contact";
-import { useMagnetic } from "../hooks/useMagnetic";
+import { useMagnetic } from "@/shared/hooks/useMagnetic";
 
 function MagneticSocial({
   label,

@@ -3,6 +3,7 @@
     "vision": "Vision",
     "foundation": "Foundation",
     "work": "Work",
+    "projects": "Projects",
     "contact": "Contact",
     "letsTalk": "Let's Talk"
   },
@@ -41,14 +42,95 @@
     "body": [
       "At Eprox, we believe technology should go beyond functionality. We create far more than websites, applications, and software. We build digital experiences that combine strategy, premium design, and software engineering to transform ambitious ideas into high-impact digital products.",
       "Every project is designed with performance, innovation, and user experience at its core. Our goal is to create solutions that not only look exceptional but also deliver real business results, strengthen brands, and accelerate our clients' growth."
-    ]
+    ],
+    "kicker": "Our Vision"
   },
   "foundation": {
     "headline": "Where It All Began",
     "body": [
       "Eprox was founded on the belief that exceptional digital products require far more than great design or well-written code. They demand the seamless integration of strategy, engineering, and user experience.",
       "Founded by Elis Pethke, Eprox was created to bridge the strength of software engineering with the sophistication of digital design. Every project is crafted with meticulous attention to detail, a focus on performance, and an unwavering commitment to excellence. Today, we partner with companies looking for more than an online presence. We create digital products that combine technology, design, and strategy to deliver lasting value and measurable results."
-    ]
+    ],
+    "kicker": "Our Story"
+  },
+  "a11y": {
+    "skipToContent": "Skip to content"
+  },
+  "meta": {
+    "title": "Eprox Studio — Digital Engineering Studio",
+    "description": "We design and build precise, performant digital architecture for brands that intend to last. Beyond websites and applications — we engineer experiences.",
+    "workTitle": "Selected Work",
+    "workDescription": "A growing collection of digital products engineered for performance, precision, and lasting impact.",
+    "privacyTitle": "Privacy Policy",
+    "termsTitle": "Terms of Service"
+  },
+  "notFound": {
+    "kicker": "Lost In Space",
+    "headline": "This page doesn't exist.",
+    "body": "The address may have changed, or it never existed. Let's take you back to solid ground.",
+    "backHome": "Back to Home"
+  },
+  "errorPage": {
+    "kicker": "Unexpected Error",
+    "headline": "Something went off-script.",
+    "body": "Our side, not yours. The team has been notified — please try again.",
+    "retry": "Try Again"
+  },
+  "legal": {
+    "privacy": {
+      "kicker": "Legal",
+      "title": "Privacy Policy",
+      "updated": "Last updated: July 2026",
+      "sections": [
+        {
+          "heading": "What we collect",
+          "body": "When you use our contact form or subscribe to the newsletter, we collect the information you provide: your name, email address, subject and message. Browsing the site itself requires no account and no personal data."
+        },
+        {
+          "heading": "How we use it",
+          "body": "Submitted information is used exclusively to respond to your inquiry or deliver the newsletter you requested. We do not sell, rent, or share your personal data with third parties for marketing purposes."
+        },
+        {
+          "heading": "Cookies",
+          "body": "We use one essential first-party cookie to remember your privacy choice for 180 days. Analytics cookies are only set if you explicitly accept them in the consent dialog, and you can change your mind at any time by clearing your cookies."
+        },
+        {
+          "heading": "Data processors",
+          "body": "Form submissions are relayed through Formspree, our form processing provider, acting as a data processor on our behalf. Their handling of your data is governed by their own privacy policy."
+        },
+        {
+          "heading": "Your rights",
+          "body": "You may request access to, correction of, or deletion of your personal data at any time by writing to contact@eproxstudio.com. We respond to all requests within 30 days."
+        }
+      ]
+    },
+    "terms": {
+      "kicker": "Legal",
+      "title": "Terms of Service",
+      "updated": "Last updated: July 2026",
+      "sections": [
+        {
+          "heading": "Acceptance",
+          "body": "By accessing this website you agree to these terms. If you do not agree with any part of them, please discontinue use of the site."
+        },
+        {
+          "heading": "Intellectual property",
+          "body": "All content on this site — including design, text, graphics, logos, imagery and code — is the property of Eprox Studio or its licensors and is protected by applicable intellectual property laws. It may not be reproduced without prior written permission."
+        },
+        {
+          "heading": "Use of the site",
+          "body": "You agree to use this site only for lawful purposes and in a way that does not infringe the rights of, or restrict the use of, any other visitor."
+        },
+        {
+          "heading": "Liability",
+          "body": "This site is provided \"as is\". While we work hard to keep information accurate and the site available, Eprox Studio accepts no liability for indirect damages arising from its use or temporary unavailability."
+        },
+        {
+          "heading": "Contact",
+          "body": "Questions about these terms can be sent to contact@eproxstudio.com. We may update these terms occasionally; the date above reflects the latest revision."
+        }
+      ]
+    }
   },
   "consent": {
     "kicker": "Privacy & Cookies",
@@ -91,29 +173,52 @@
     "viewProject": "View Project",
     "prev": "Previous project",
     "next": "Next project",
-    "goTo": "Go to project"
+    "goTo": "Go to project",
+    "play": "Resume autoplay",
+    "pause": "Pause autoplay",
+    "announce": "{title} — project {current} of {total}"
   },
   "work": {
-    "featuredHeadline": "Featured Projects",
-    "viewAll": "View All Projects",
-    "prev": "Previous project",
-    "next": "Next project",
-    "pageHeadline": "Selected Work",
-    "pageSubheadline": "A growing collection of digital products engineered for performance, precision, and lasting impact.",
-    "projectCountLabel": "Projects",
+    "kicker": "Our Work",
+    "titleLine1": "Selected",
+    "titleLine2": "Projects",
+    "subtitle": "Digital experiences that combine strategy, design and technology to drive real business results.",
+    "viewProject": "View Project",
+    "viewAllProjects": "View all projects",
+    "stats": {
+      "total": "Projects Delivered",
+      "websites": "Websites Developed",
+      "systems": "Systems Implemented",
+      "apps": "Apps Published"
+    },
+    "filter": {
+      "all": "All",
+      "websites": "Websites",
+      "systems": "Systems",
+      "apps": "Apps",
+      "sortLabel": "Sort",
+      "sortRecent": "Most Recent",
+      "sortAz": "A–Z"
+    },
     "sections": {
-      "web": {
-        "eyebrow": "Web Development",
-        "headline": "Web Projects"
+      "websites": {
+        "title": "Websites",
+        "description": "Digital experiences that connect brands and people."
       },
       "systems": {
-        "eyebrow": "Systems & Platforms",
-        "headline": "Systems"
+        "title": "Systems",
+        "description": "Robust platforms that streamline operations and results."
       },
-      "mobile": {
-        "eyebrow": "Mobile Apps",
-        "headline": "Mobile Apps"
+      "apps": {
+        "title": "Apps",
+        "description": "Native and cross-platform apps engineered for performance."
       }
+    },
+    "cta": {
+      "kicker": "Let's Create Something Extraordinary",
+      "title": "Have a project in mind?",
+      "subtitle": "We turn ideas into high-impact digital solutions.",
+      "button": "Let's Talk"
     }
   }
 }

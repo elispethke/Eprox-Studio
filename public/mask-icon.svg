@@ -1,4 +1,10 @@
 <svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-  <text x="256" y="336" font-family="Lora" font-weight="700" font-size="308" text-anchor="middle" fill="#000000">E</text>
-  <rect x="191" y="368" width="130" height="11" rx="5.5" fill="#000000"/>
+  <!-- Safari pinned-tab mask: single-color silhouette of the hexagon E mark. -->
+  <polygon points="465,256 361,437 151,437 47,256 151,75 361,75" fill="none" stroke="#000" stroke-width="34" stroke-linejoin="round"/>
+  <g fill="#000">
+    <rect x="196" y="166" width="26" height="180"/>
+    <rect x="196" y="166" width="120" height="26"/>
+    <rect x="196" y="243" width="96" height="26"/>
+    <rect x="196" y="320" width="120" height="26"/>
+  </g>
 </svg>

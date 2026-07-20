@@ -4,6 +4,8 @@ interface ProjectBase {
   id: string;
   title: string;
   category: string;
+  /** Tech badges shown on the card (e.g. "Next.js", "Tailwind"). */
+  stack: string[];
   featured: boolean;
 }
 
@@ -14,7 +16,8 @@ export interface WebProject extends ProjectBase {
 
 export interface MobileProject extends ProjectBase {
   type: "mobile";
-  videoSrc: string;
+  /** Looping phone-screen capture; when absent the poster renders as a static mockup. */
+  videoSrc?: string;
   videoSrcWebm?: string;
   poster: string;
 }

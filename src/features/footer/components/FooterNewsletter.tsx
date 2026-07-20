@@ -54,7 +54,7 @@ export default function FooterNewsletter() {
 
   return (
     <div>
-      <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-espresso/45">
+      <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-espresso/60">
         {t("newsletterTitle")}
       </span>
       <form onSubmit={submit} noValidate className="mt-4">

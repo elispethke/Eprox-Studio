@@ -4,10 +4,9 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { useTextReveal } from "@/features/home/hooks/useTextReveal";
-import { useSectionFade } from "@/features/home/hooks/useSectionFade";
+import { useSectionFade } from "@/shared/hooks/useSectionFade";
 import { useFlowLines } from "@/features/home/hooks/useFlowLines";
 import { useHeroBackgroundDrift } from "@/features/home/hooks/useHeroBackgroundDrift";
-
 
 export default function Hero() {
   const t = useTranslations("hero");
@@ -28,6 +27,25 @@ export default function Hero() {
     }
   }, []);
 
+  // Motion sensitivity applies to the video too, not only the JS animations:
+  // freeze it on the poster-like first frame and reveal the copy immediately.
+  useEffect(() => {
+    const query = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const apply = () => {
+      const video = videoRef.current;
+      if (!video) return;
+      if (query.matches) {
+        video.pause();
+        setIsVideoReady(true);
+      } else if (video.paused) {
+        void video.play().catch(() => setIsVideoReady(true));
+      }
+    };
+    apply();
+    query.addEventListener("change", apply);
+    return () => query.removeEventListener("change", apply);
+  }, []);
+
   return (
     <motion.section
       ref={ref}
@@ -46,10 +64,12 @@ export default function Hero() {
           loop
           playsInline
           preload="auto"
+          poster="/videos/hero-poster.jpg"
           onLoadedData={revealText}
           onError={revealText}
           className="absolute inset-0 h-full w-full object-cover"
         >
+          <source src="/videos/hero-background.webm" type="video/webm" />
           <source src="/videos/hero-background.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-obsidian/30" />
@@ -78,7 +98,10 @@ export default function Hero() {
           <span className="mt-1 flex flex-wrap justify-center gap-x-3 gap-y-1 text-2xl font-light text-sand sm:mt-2 sm:text-3xl md:text-4xl">
             {[leadWord, secondWord].map((wordText, index) => (
               <span key={`${wordText}-${index}`} className="overflow-hidden">
-                <motion.span variants={word} className="inline-block leading-[1.2]">
+                <motion.span
+                  variants={word}
+                  className="inline-block leading-[1.2]"
+                >
                   {wordText}
                 </motion.span>
               </span>
@@ -90,7 +113,10 @@ export default function Hero() {
           <span className="mt-2 flex flex-wrap justify-center gap-x-2 gap-y-1 text-lg font-light text-sand/70 sm:text-xl md:text-2xl">
             {restWords.map((wordText, index) => (
               <span key={`${wordText}-${index}`} className="overflow-hidden">
-                <motion.span variants={word} className="inline-block leading-[1.3]">
+                <motion.span
+                  variants={word}
+                  className="inline-block leading-[1.3]"
+                >
                   {wordText}
                 </motion.span>
               </span>

@@ -1,77 +1,123 @@
 import type { MobileProject } from "@/features/projects/types";
 
-function poster(index: number): string {
-  const variant = (index % 8) + 1;
-  return `/images/projects/placeholder-${variant}.jpg`;
-}
+// Fictional showcase apps (approved reference set). Six entries carry REAL
+// screen-capture loops recorded for this portfolio (public/videos/mobile);
+// the other four use verified royalty-free phone photography as posters.
+const video = (id: string) => `/videos/mobile/${id}.mp4`;
+const videoWebm = (id: string) => `/videos/mobile/${id}.webm`;
+const photo = (id: string) =>
+  `https://images.unsplash.com/photo-${id}?w=700&q=80&auto=format&fit=crop`;
 
-function video(id: string): string {
-  return `/videos/mobile/${id}.mp4`;
-}
+const withVideo = (
+  id: string,
+  videoId: string,
+  title: string,
+  category: string,
+  stack: string[],
+  poster: string
+): MobileProject => ({
+  id,
+  title,
+  category,
+  stack,
+  type: "mobile",
+  videoSrc: video(videoId),
+  videoSrcWebm: videoWebm(videoId),
+  poster: photo(poster),
+  featured: false,
+});
 
-function videoWebm(id: string): string {
-  return `/videos/mobile/${id}.webm`;
-}
+const withPhoto = (
+  id: string,
+  title: string,
+  category: string,
+  stack: string[],
+  poster: string
+): MobileProject => ({
+  id,
+  title,
+  category,
+  stack,
+  type: "mobile",
+  poster: photo(poster),
+  featured: false,
+});
 
 export const mobileProjects: MobileProject[] = [
-  {
-    id: "pulse-fitness-app",
-    title: "Pulse Fitness",
-    category: "Fitness App",
-    type: "mobile",
-    videoSrc: video("pulse-fitness-app"),
-    videoSrcWebm: videoWebm("pulse-fitness-app"),
-    poster: poster(2),
-    featured: false,
-  },
-  {
-    id: "lumen-fintech-app",
-    title: "Lumen Wallet",
-    category: "Fintech App",
-    type: "mobile",
-    videoSrc: video("lumen-fintech-app"),
-    videoSrcWebm: videoWebm("lumen-fintech-app"),
-    poster: poster(4),
-    featured: false,
-  },
-  {
-    id: "wavelength-music-app",
-    title: "Wavelength",
-    category: "Music Streaming App",
-    type: "mobile",
-    videoSrc: video("wavelength-music-app"),
-    videoSrcWebm: videoWebm("wavelength-music-app"),
-    poster: poster(0),
-    featured: false,
-  },
-  {
-    id: "clarity-health-app",
-    title: "Clarity Health",
-    category: "Health & Wellness App",
-    type: "mobile",
-    videoSrc: video("clarity-health-app"),
-    videoSrcWebm: videoWebm("clarity-health-app"),
-    poster: poster(1),
-    featured: false,
-  },
-  {
-    id: "farflung-travel-app",
-    title: "Farflung",
-    category: "Travel App",
-    type: "mobile",
-    videoSrc: video("farflung-travel-app"),
-    videoSrcWebm: videoWebm("farflung-travel-app"),
-    poster: poster(7),
-    featured: false,
-  },
-  {
-    id: "ledger-financial-dashboard",
-    title: "Ledger",
-    category: "Financial Dashboard App",
-    type: "mobile",
-    videoSrc: video("ledger-financial-dashboard"),
-    videoSrcWebm: videoWebm("ledger-financial-dashboard"),
-    poster: poster(3),
-    featured: false,
-  },
+  withVideo(
+    "fittrack",
+    "pulse-fitness-app",
+    "FitTrack",
+    "Fitness & Health",
+    ["iOS", "Android"],
+    "1512941937669-90a1b58e7e9c"
+  ),
+  withPhoto(
+    "foodgo",
+    "FoodGo",
+    "Food Delivery",
+    ["iOS", "Android"],
+    "1512499617640-c74ae3a79d37"
+  ),
+  withVideo(
+    "habitplus",
+    "clarity-health-app",
+    "HabitPlus",
+    "Productivity",
+    ["iOS", "Android"],
+    "1523206489230-c012c64b2b48"
+  ),
+  withVideo(
+    "t-bank",
+    "ledger-financial-dashboard",
+    "T-Bank",
+    "Digital Banking",
+    ["iOS", "Android"],
+    "1556656793-08538906a9f8"
+  ),
+  withVideo(
+    "mindly",
+    "wavelength-music-app",
+    "Mindly",
+    "Mental Health",
+    ["iOS", "Android"],
+    "1601784551446-20c9e07cdbdb"
+  ),
+  withPhoto(
+    "yourway",
+    "YourWay",
+    "Daily Planner",
+    ["iOS", "Android"],
+    "1605236453806-6ff36851218e"
+  ),
+  withVideo(
+    "lumen-wallet",
+    "lumen-fintech-app",
+    "Lumen Wallet",
+    "Fintech",
+    ["React Native"],
+    "1512941937669-90a1b58e7e9c"
+  ),
+  withVideo(
+    "farflung",
+    "farflung-travel-app",
+    "Farflung",
+    "Travel Companion",
+    ["iOS", "Android"],
+    "1523206489230-c012c64b2b48"
+  ),
+  withPhoto(
+    "aera-home",
+    "Aera",
+    "Smart Home",
+    ["React Native"],
+    "1593642532973-d31b6557fa68"
+  ),
+  withPhoto(
+    "notio",
+    "Notio",
+    "Notes & Focus",
+    ["iOS", "Android"],
+    "1593642634315-48f5414c3ad9"
+  ),
 ];

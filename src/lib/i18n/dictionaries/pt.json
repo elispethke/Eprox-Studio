@@ -3,6 +3,7 @@
     "vision": "Visão",
     "foundation": "Origem",
     "work": "Trabalhos",
+    "projects": "Projetos",
     "contact": "Contato",
     "letsTalk": "Vamos Conversar"
   },
@@ -37,18 +38,99 @@
     "subheadline": "Projetamos e desenvolvemos arquitetura digital precisa e de alta performance para marcas que pensam no longo prazo. Muito além de sites e aplicativos, criamos experiências digitais."
   },
   "vision": {
-    "headline": "Transformando Ideias em Produtos Digitais",
+    "headline": "Transformando\nIdeias em\nProdutos\nDigitais",
     "body": [
       "Na Eprox, acreditamos que a tecnologia deve ir além da funcionalidade. Criamos muito mais do que sites, aplicativos e sistemas. Desenvolvemos experiências digitais que unem estratégia, design de alto padrão e engenharia de software para transformar ideias ambiciosas em produtos digitais de alto impacto.",
       "Cada projeto é concebido com foco em performance, inovação e experiência do usuário. Nosso objetivo é criar soluções que não apenas impressionem visualmente, mas também gerem resultados reais, fortaleçam marcas e acelerem o crescimento dos nossos clientes."
-    ]
+    ],
+    "kicker": "Nossa Visão"
   },
   "foundation": {
     "headline": "Onde Tudo Começou",
     "body": [
       "A Eprox nasceu da convicção de que produtos digitais excepcionais exigem muito mais do que um bom design ou um código bem escrito. Eles precisam unir estratégia, engenharia e experiência em um único processo.",
       "Fundada por Elis Pethke, a Eprox foi criada para aproximar a solidez da engenharia de software da sofisticação do design digital. Cada projeto é desenvolvido com atenção aos detalhes, foco em performance e compromisso com a excelência em cada etapa. Hoje, trabalhamos com empresas que buscam mais do que uma presença online. Criamos produtos digitais que unem tecnologia, design e estratégia para gerar resultados consistentes e valor duradouro."
-    ]
+    ],
+    "kicker": "Nossa História"
+  },
+  "a11y": {
+    "skipToContent": "Pular para o conteúdo"
+  },
+  "meta": {
+    "title": "Eprox Studio — Estúdio de Engenharia Digital",
+    "description": "Projetamos e desenvolvemos arquitetura digital precisa e de alta performance para marcas que pensam no longo prazo. Muito além de sites e aplicativos — criamos experiências.",
+    "workTitle": "Projetos Selecionados",
+    "workDescription": "Uma coleção crescente de produtos digitais desenvolvidos com foco em desempenho, precisão e impacto duradouro.",
+    "privacyTitle": "Política de Privacidade",
+    "termsTitle": "Termos de Uso"
+  },
+  "notFound": {
+    "kicker": "Perdido No Espaço",
+    "headline": "Esta página não existe.",
+    "body": "O endereço pode ter mudado, ou nunca existiu. Vamos te levar de volta a terreno firme.",
+    "backHome": "Voltar ao Início"
+  },
+  "errorPage": {
+    "kicker": "Erro Inesperado",
+    "headline": "Algo saiu do roteiro.",
+    "body": "A falha é nossa, não sua. A equipe já foi notificada — tente novamente.",
+    "retry": "Tentar Novamente"
+  },
+  "legal": {
+    "privacy": {
+      "kicker": "Legal",
+      "title": "Política de Privacidade",
+      "updated": "Última atualização: julho de 2026",
+      "sections": [
+        {
+          "heading": "O que coletamos",
+          "body": "Quando você usa nosso formulário de contato ou assina a newsletter, coletamos as informações que você fornece: nome, e-mail, assunto e mensagem. Navegar pelo site não exige conta nem dados pessoais."
+        },
+        {
+          "heading": "Como usamos",
+          "body": "As informações enviadas são usadas exclusivamente para responder ao seu contato ou entregar a newsletter solicitada. Não vendemos, alugamos nem compartilhamos seus dados pessoais com terceiros para fins de marketing."
+        },
+        {
+          "heading": "Cookies",
+          "body": "Usamos um único cookie essencial próprio para lembrar sua escolha de privacidade por 180 dias. Cookies de análise só são definidos se você aceitá-los explicitamente no diálogo de consentimento, e você pode mudar de ideia a qualquer momento limpando seus cookies."
+        },
+        {
+          "heading": "Processadores de dados",
+          "body": "Os envios do formulário são retransmitidos pela Formspree, nosso provedor de processamento de formulários, atuando como processador de dados em nosso nome. O tratamento é regido pela política de privacidade deles."
+        },
+        {
+          "heading": "Seus direitos",
+          "body": "Você pode solicitar acesso, correção ou exclusão dos seus dados pessoais a qualquer momento escrevendo para contact@eproxstudio.com. Respondemos a todas as solicitações em até 30 dias."
+        }
+      ]
+    },
+    "terms": {
+      "kicker": "Legal",
+      "title": "Termos de Uso",
+      "updated": "Última atualização: julho de 2026",
+      "sections": [
+        {
+          "heading": "Aceite",
+          "body": "Ao acessar este site você concorda com estes termos. Se não concordar com qualquer parte deles, por favor descontinue o uso do site."
+        },
+        {
+          "heading": "Propriedade intelectual",
+          "body": "Todo o conteúdo deste site — incluindo design, textos, gráficos, logos, imagens e código — é propriedade da Eprox Studio ou de seus licenciadores e está protegido pelas leis de propriedade intelectual aplicáveis. Não pode ser reproduzido sem autorização prévia por escrito."
+        },
+        {
+          "heading": "Uso do site",
+          "body": "Você concorda em usar este site apenas para fins lícitos e de forma que não infrinja os direitos nem restrinja o uso de qualquer outro visitante."
+        },
+        {
+          "heading": "Responsabilidade",
+          "body": "Este site é fornecido \"como está\". Embora trabalhemos para manter as informações precisas e o site disponível, a Eprox Studio não se responsabiliza por danos indiretos decorrentes do seu uso ou de indisponibilidade temporária."
+        },
+        {
+          "heading": "Contato",
+          "body": "Dúvidas sobre estes termos podem ser enviadas para contact@eproxstudio.com. Podemos atualizá-los ocasionalmente; a data acima reflete a revisão mais recente."
+        }
+      ]
+    }
   },
   "consent": {
     "kicker": "Privacidade & Cookies",
@@ -91,29 +173,52 @@
     "viewProject": "Ver Projeto",
     "prev": "Projeto anterior",
     "next": "Próximo projeto",
-    "goTo": "Ir para o projeto"
+    "goTo": "Ir para o projeto",
+    "play": "Retomar reprodução automática",
+    "pause": "Pausar reprodução automática",
+    "announce": "{title} — projeto {current} de {total}"
   },
   "work": {
-    "featuredHeadline": "Projetos em Destaque",
-    "viewAll": "Ver Todos os Projetos",
-    "prev": "Projeto anterior",
-    "next": "Próximo projeto",
-    "pageHeadline": "Projetos Selecionados",
-    "pageSubheadline": "Uma coleção crescente de produtos digitais desenvolvidos com foco em desempenho, precisão e impacto duradouro.",
-    "projectCountLabel": "Projetos",
+    "kicker": "Nosso Trabalho",
+    "titleLine1": "Projetos",
+    "titleLine2": "Selecionados",
+    "subtitle": "Experiências digitais que unem estratégia, design e tecnologia para gerar resultados reais de negócio.",
+    "viewProject": "Ver Projeto",
+    "viewAllProjects": "Ver todos os projetos",
+    "stats": {
+      "total": "Projetos Entregues",
+      "websites": "Websites Desenvolvidos",
+      "systems": "Sistemas Implementados",
+      "apps": "Apps Publicados"
+    },
+    "filter": {
+      "all": "Todos",
+      "websites": "Websites",
+      "systems": "Sistemas",
+      "apps": "Apps",
+      "sortLabel": "Ordenar",
+      "sortRecent": "Mais Recentes",
+      "sortAz": "A–Z"
+    },
     "sections": {
-      "web": {
-        "eyebrow": "Desenvolvimento Web",
-        "headline": "Projetos Web"
+      "websites": {
+        "title": "Websites",
+        "description": "Experiências digitais que conectam marcas e pessoas."
       },
       "systems": {
-        "eyebrow": "Sistemas & Plataformas",
-        "headline": "Sistemas"
+        "title": "Sistemas",
+        "description": "Plataformas robustas que otimizam operações e resultados."
       },
-      "mobile": {
-        "eyebrow": "Aplicativos Móveis",
-        "headline": "Aplicativos Mobile"
+      "apps": {
+        "title": "Apps",
+        "description": "Aplicativos nativos e multiplataforma com foco em performance."
       }
+    },
+    "cta": {
+      "kicker": "Vamos Criar Algo Extraordinário",
+      "title": "Tem um projeto em mente?",
+      "subtitle": "Transformamos ideias em soluções digitais de alto impacto.",
+      "button": "Vamos Conversar"
     }
   }
 }

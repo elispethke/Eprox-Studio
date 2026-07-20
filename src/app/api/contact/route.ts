@@ -1,29 +1,10 @@
 import { NextResponse } from "next/server";
-import { contactSchema, type ContactResponse } from "@/features/contact-form/schema";
-
-// Simple in-memory rate limit: N submissions per IP per window. Resets on
-// server restart, which is acceptable for a contact form — its job is to
-// blunt bursts, not to be bookkeeping-perfect.
-const RATE_WINDOW_MS = 10 * 60_000;
-const RATE_MAX_PER_WINDOW = 5;
-const submissionLog = new Map<string, number[]>();
-
-function isRateLimited(ip: string): boolean {
-  // In local dev every request shares one "local" bucket and test runs
-  // exhaust the window instantly — only enforce the limit in production.
-  if (process.env.NODE_ENV !== "production") return false;
-  const now = Date.now();
-  const recent = (submissionLog.get(ip) ?? []).filter(
-    (timestamp) => now - timestamp < RATE_WINDOW_MS,
-  );
-  if (recent.length >= RATE_MAX_PER_WINDOW) {
-    submissionLog.set(ip, recent);
-    return true;
-  }
-  recent.push(now);
-  submissionLog.set(ip, recent);
-  return false;
-}
+import {
+  contactSchema,
+  type ContactResponse,
+} from "@/features/contact-form/schema";
+import { getServerEnv } from "@/shared/lib/env.server";
+import { isRateLimited } from "@/shared/lib/rate-limit.server";
 
 function json(body: ContactResponse, status: number) {
   return NextResponse.json(body, { status });
@@ -40,7 +21,7 @@ export async function POST(request: Request) {
     const ip =
       request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ?? "local";
 
-    if (isRateLimited(ip)) {
+    if (await isRateLimited(ip)) {
       return json({ success: false }, 429);
     }
 
@@ -56,7 +37,7 @@ export async function POST(request: Request) {
       return json({ success: true }, 200);
     }
 
-    const endpoint = process.env.FORMSPREE_ENDPOINT;
+    const endpoint = getServerEnv().FORMSPREE_ENDPOINT;
     if (!endpoint) {
       console.error("[contact] FORMSPREE_ENDPOINT is not configured");
       return json({ success: false }, 500);
@@ -74,7 +55,11 @@ export async function POST(request: Request) {
 
     if (!upstream.ok) {
       const detail = await upstream.text().catch(() => "<unreadable body>");
-      console.error("[contact] upstream rejected submission", upstream.status, detail);
+      console.error(
+        "[contact] upstream rejected submission",
+        upstream.status,
+        detail
+      );
       return json({ success: false }, 502);
     }
 
