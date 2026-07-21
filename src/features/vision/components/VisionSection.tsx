@@ -68,7 +68,7 @@ export default function OurVision() {
       id="vision"
       ref={ref}
       style={{ opacity }}
-      className="sticky top-0 z-20 flex h-screen items-center overflow-hidden bg-obsidian px-6 py-24 md:py-32"
+      className="sticky top-0 z-20 flex min-h-screen items-center overflow-hidden bg-obsidian px-6 py-24 md:py-32"
     >
       <div
         ref={containerRef}

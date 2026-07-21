@@ -21,7 +21,12 @@ export default function Foundation() {
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setOpacity(entry.intersectionRatio);
+        // Ratio against the viewport (not the target) so full opacity is
+        // still reached once content taller than one screen makes the
+        // section itself taller than the root — intersectionRatio alone
+        // would then cap below 1.
+        const rootHeight = entry.rootBounds?.height ?? window.innerHeight;
+        setOpacity(entry.intersectionRect.height / rootHeight);
       },
       { threshold: Array.from({ length: 11 }, (_, index) => index / 10) }
     );
@@ -68,7 +73,7 @@ export default function Foundation() {
       id="foundation"
       ref={sectionRef}
       style={{ opacity }}
-      className="sticky top-0 z-30 flex h-screen items-center overflow-hidden bg-sand px-6 py-24 md:py-32"
+      className="sticky top-0 z-30 flex min-h-screen items-center overflow-hidden bg-sand px-6 py-24 md:py-32"
     >
       <div className="mx-auto grid w-full max-w-7xl gap-12 md:grid-cols-2 md:items-center md:gap-20">
         <div className="order-2 md:order-1 md:max-w-xl">

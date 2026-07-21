@@ -4,7 +4,6 @@ import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { CardGlassWrapper, type MobileProject } from "@/features/projects";
-import ProjectBadge from "./ProjectBadge";
 
 interface AppCardProps {
   project: MobileProject;
@@ -75,11 +74,6 @@ export default function AppCard({ project }: AppCardProps) {
                 className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
               />
             </span>
-          </div>
-          <div className="mt-auto flex flex-wrap gap-1.5">
-            {project.stack.map((tech) => (
-              <ProjectBadge key={tech} label={tech} />
-            ))}
           </div>
         </div>
       </article>
